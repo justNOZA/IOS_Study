@@ -33,25 +33,35 @@
                                 <rect key="frame" x="20" y="50" width="984" height="1291"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyp-2y-P9G">
-                                        <rect key="frame" x="0.0" y="0.0" width="984" height="645.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="984" height="581"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8n-Qs-zl5">
-                                        <rect key="frame" x="0.0" y="645.5" width="984" height="645.5"/>
+                                        <rect key="frame" x="0.0" y="710" width="984" height="581"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAB-UQ-g5w">
+                                        <rect key="frame" x="246" y="581" width="492" height="129"/>
+                                        <state key="normal" title="Reading"/>
+                                        <connections>
+                                            <action selector="readImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbc-Hb-U1t"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="TAB-UQ-g5w" firstAttribute="top" secondItem="Wyp-2y-P9G" secondAttribute="bottom" id="7im-a0-bUb"/>
+                                    <constraint firstItem="TAB-UQ-g5w" firstAttribute="width" secondItem="NP3-me-Ynn" secondAttribute="width" multiplier="0.5" id="8XA-LB-tDu"/>
                                     <constraint firstAttribute="trailing" secondItem="Wyp-2y-P9G" secondAttribute="trailing" id="8wX-eO-PCS"/>
                                     <constraint firstItem="Wyp-2y-P9G" firstAttribute="top" secondItem="NP3-me-Ynn" secondAttribute="top" id="EKL-Sv-fcu"/>
-                                    <constraint firstItem="Wyp-2y-P9G" firstAttribute="height" secondItem="NP3-me-Ynn" secondAttribute="height" multiplier="0.5" id="J8v-9n-QOd"/>
+                                    <constraint firstItem="Wyp-2y-P9G" firstAttribute="height" secondItem="NP3-me-Ynn" secondAttribute="height" multiplier="0.45" id="J8v-9n-QOd"/>
                                     <constraint firstItem="H8n-Qs-zl5" firstAttribute="leading" secondItem="NP3-me-Ynn" secondAttribute="leading" id="QrG-6f-XTv"/>
                                     <constraint firstItem="Wyp-2y-P9G" firstAttribute="leading" secondItem="NP3-me-Ynn" secondAttribute="leading" id="UcA-kx-qsb"/>
-                                    <constraint firstItem="H8n-Qs-zl5" firstAttribute="height" secondItem="NP3-me-Ynn" secondAttribute="height" multiplier="0.5" id="cIM-RM-yi2"/>
-                                    <constraint firstAttribute="bottom" secondItem="H8n-Qs-zl5" secondAttribute="bottom" id="mgS-2p-EbB"/>
+                                    <constraint firstAttribute="bottom" secondItem="H8n-Qs-zl5" secondAttribute="bottom" id="c86-E9-Wfx"/>
+                                    <constraint firstItem="H8n-Qs-zl5" firstAttribute="height" secondItem="NP3-me-Ynn" secondAttribute="height" multiplier="0.45" id="cIM-RM-yi2"/>
+                                    <constraint firstItem="H8n-Qs-zl5" firstAttribute="top" secondItem="TAB-UQ-g5w" secondAttribute="bottom" id="n08-4O-rGx"/>
                                     <constraint firstAttribute="trailing" secondItem="H8n-Qs-zl5" secondAttribute="trailing" id="rOV-el-wQD"/>
-                                    <constraint firstItem="H8n-Qs-zl5" firstAttribute="top" secondItem="Wyp-2y-P9G" secondAttribute="bottom" id="tgi-Q1-ekS"/>
+                                    <constraint firstItem="TAB-UQ-g5w" firstAttribute="centerX" secondItem="NP3-me-Ynn" secondAttribute="centerX" id="rrc-0N-aD0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -73,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63.768115942028992" y="123.88392857142857"/>
+            <point key="canvasLocation" x="63.281249999999993" y="123.86530014641288"/>
         </scene>
     </scenes>
     <resources>
