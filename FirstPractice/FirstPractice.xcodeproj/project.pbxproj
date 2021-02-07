@@ -86,6 +86,7 @@
 				968A892825CFC38900BF356E /* Sources */,
 				968A892925CFC38900BF356E /* Frameworks */,
 				968A892A25CFC38900BF356E /* Resources */,
+				96C12B3525D032AC007C463D /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -143,6 +144,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96C12B3525D032AC007C463D /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n#for file in `\\find . -name \\*.storyboard`; do\n#    IFS=$'\\n'\n#    for xmlKey in `\\grep 'keyPath=\"localizedKey\"' ${file}`; do\n#        localizedKey=`echo $xmlKey | sed -e 's/.* keyPath=\"localizedKey\" value=\"\\([0-9a-zA-Z_-]*\\)\".*/\\1/g'`\n#        for localizedStringFile in `\\find ${SRCROOT} -name Localizable.strings`; do\n#            grep \"\\\"${localizedKey}\\\" =\" $localizedStringFile > /dev/null 2>&1\n#            if [ $? != 0 ]; then\n#                echo \"not exists key '${localizedKey}' in ${localizedStringFile}\"\n#                exit 1\n#            fi\n#        done\n#    done\n#done\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		968A892825CFC38900BF356E /* Sources */ = {
