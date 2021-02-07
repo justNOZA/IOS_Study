@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    //click event
+    @IBAction func ClickChangeBtn(_ sender: Any) {
+        print("Click Button")
+    }
+    
 }
 
