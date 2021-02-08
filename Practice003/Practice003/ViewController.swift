@@ -14,12 +14,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         // LocalL.text = NSLocalizedString("Hello", comment: "")
         // LocalL.text = "Hello".localized
+    
     }
     @IBOutlet weak var LocalL: UILabel!
     
     @IBOutlet weak var ChgBtn: UIButton!
-    @IBAction func ChgBtn(_ sender: Any) {
-    }
 }
 
 extension UILabel {

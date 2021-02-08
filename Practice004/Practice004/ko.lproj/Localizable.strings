@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Practice004
+
+  Created by Pasonatech on 2021/02/08.
+  
+*/
+"Hello1" = "안녕";
+"Button" = "한글 버튼";
