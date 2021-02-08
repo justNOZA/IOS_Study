@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ModeImg: UIImageView!
     @IBOutlet weak var Greet: UILabel!
     
+//오늘은 정말 커밋 많이함
     @IBAction func CBtn(_ sender: Any) {
         /*
         Greet.text = NSLocalizedString("Hello1", comment: "")
