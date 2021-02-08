@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,30 +28,58 @@
                                 <rect key="frame" x="180.5" y="732" width="53" height="30"/>
                                 <state key="normal" title="Change"/>
                                 <connections>
-                                    <action selector="CBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7y-ry-haQ"/>
+                                    <action selector="CBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8v-qG-g1e"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kju-Rc-ox6">
+                                <rect key="frame" x="20" y="398" width="374" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImg" translatesAutoresizingMaskIntoConstraints="NO" id="V5d-wP-McP">
+                                        <rect key="frame" x="162" y="25" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Q1A-Ya-FuL"/>
+                                            <constraint firstAttribute="width" constant="50" id="sdi-Bf-WEZ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="testColor"/>
+                                <constraints>
+                                    <constraint firstItem="V5d-wP-McP" firstAttribute="centerX" secondItem="kju-Rc-ox6" secondAttribute="centerX" id="J1b-Y4-Hga"/>
+                                    <constraint firstAttribute="height" constant="100" id="ZuK-Je-Jvr"/>
+                                    <constraint firstItem="V5d-wP-McP" firstAttribute="centerY" secondItem="kju-Rc-ox6" secondAttribute="centerY" id="qqn-3J-M8z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PKI-DC-yAw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="4Gx-JK-32q"/>
+                            <constraint firstItem="kju-Rc-ox6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Kq-Hl-alN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="asd-9O-O21" secondAttribute="bottom" constant="100" id="AM1-lh-WKY"/>
+                            <constraint firstItem="kju-Rc-ox6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EEe-3M-AsE"/>
+                            <constraint firstItem="kju-Rc-ox6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRy-6h-4Jc"/>
                             <constraint firstItem="PKI-DC-yAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e96-St-z2O"/>
                             <constraint firstItem="asd-9O-O21" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rNb-Kv-MCn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kju-Rc-ox6" secondAttribute="trailing" constant="20" id="wVZ-2g-nS6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CBtn" destination="asd-9O-O21" id="ijY-Z7-h3S"/>
+                        <outlet property="CBtn" destination="asd-9O-O21" id="puJ-dY-cOW"/>
                         <outlet property="Greet" destination="PKI-DC-yAw" id="rtY-8l-ZoR"/>
+                        <outlet property="ModeImg" destination="V5d-wP-McP" id="Qbz-Ok-d4h"/>
+                        <outlet property="myView" destination="kju-Rc-ox6" id="hrh-cT-KMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
         </scene>
     </scenes>
     <resources>
+        <image name="testImg" width="24" height="24"/>
+        <namedColor name="testColor">
+            <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -26,8 +26,24 @@ class ViewController: UIViewController {
         // Greet.text = NSLocalizedString(“Hello”, comment: “”)
         // Greet.text = “Hello”.localized
         
+        view.backgroundColor = .secondarySystemBackground
+ /*
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            myView.backgroundColor = .systemPurple
+            Greet.textColor = .white
+            CBtn.setTitleColor(.white, for: UIControl.State.normal)
+        case .light:
+            myView.backgroundColor = .brown
+            Greet.textColor = .black
+            CBtn.setTitleColor(.black, for: UIControl.State.normal)
+        default:
+            print("Dont select")
+        }
+ */
+        //myView.backgroundColor = .
     }
-
+    @IBOutlet weak var ModeImg: UIImageView!
     @IBOutlet weak var Greet: UILabel!
     
     @IBAction func CBtn(_ sender: Any) {
@@ -37,9 +53,11 @@ class ViewController: UIViewController {
         */
         Greet.localizedKey = "Hello1"
         CBtn.localizedKey = "Button"
+        
     }
-    
+    @IBOutlet weak var myView: UIView!
     @IBOutlet weak var CBtn: UIButton!
+
 }
 extension UILabel {
     @IBInspectable
@@ -68,6 +86,7 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
 }
+
 /*
  extension String {
     var localized: String {
