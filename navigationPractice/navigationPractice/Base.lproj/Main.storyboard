@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WaF-ni-AoY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LJB-Yg-xvv">
+            <objects>
+                <navigationController id="WaF-ni-AoY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pN2-z2-3Ij">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U1U-6l-LSQ" kind="relationship" relationship="rootViewController" id="2Dk-nn-eHo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cA-TC-Tu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491" y="-52"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fVo-hy-IBG">
+            <objects>
+                <viewController id="U1U-6l-LSQ" customClass="ViewController" customModule="navigationPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEz-Jn-yhf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goB-FQ-KIS">
+                                <rect key="frame" x="171" y="424" width="72" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Move"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dqK-Rz-max"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="goB-FQ-KIS" firstAttribute="centerX" secondItem="eEz-Jn-yhf" secondAttribute="centerX" id="Czi-41-64J"/>
+                            <constraint firstItem="goB-FQ-KIS" firstAttribute="centerY" secondItem="eEz-Jn-yhf" secondAttribute="centerY" id="KPw-xu-llH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jab-wo-nNo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyp-wK-EC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="-52"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3PV-1L-yJu">
+            <objects>
+                <viewController id="UJE-4L-8hg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Nx-1S-2Ji">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AYr-5U-Rgr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3L-1A-EYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="-52"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

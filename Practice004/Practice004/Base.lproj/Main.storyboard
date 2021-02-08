@@ -34,7 +34,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kju-Rc-ox6">
                                 <rect key="frame" x="20" y="398" width="374" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImg" translatesAutoresizingMaskIntoConstraints="NO" id="V5d-wP-McP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImage2" translatesAutoresizingMaskIntoConstraints="NO" id="V5d-wP-McP">
                                         <rect key="frame" x="162" y="25" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Q1A-Ya-FuL"/>
@@ -66,8 +66,6 @@
                     <connections>
                         <outlet property="CBtn" destination="asd-9O-O21" id="puJ-dY-cOW"/>
                         <outlet property="Greet" destination="PKI-DC-yAw" id="rtY-8l-ZoR"/>
-                        <outlet property="ModeImg" destination="V5d-wP-McP" id="Qbz-Ok-d4h"/>
-                        <outlet property="myView" destination="kju-Rc-ox6" id="hrh-cT-KMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,7 +74,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="testImg" width="24" height="24"/>
+        <image name="testImage2" width="24" height="24"/>
         <namedColor name="testColor">
             <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

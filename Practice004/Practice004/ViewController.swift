@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Greet.text = NSLocalizedString(“Hello”, comment: “”)
         // Greet.text = “Hello”.localized
         
-        view.backgroundColor = .secondarySystemBackground
+//        view.backgroundColor = .secondarySystemBackground
  /*
         switch traitCollection.userInterfaceStyle {
         case .dark:
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
  */
         //myView.backgroundColor = .
     }
-    @IBOutlet weak var ModeImg: UIImageView!
+  //  @IBOutlet weak var ModeImg: UIImageView!
     @IBOutlet weak var Greet: UILabel!
     
 //오늘은 정말 커밋 많이함
@@ -56,36 +56,8 @@ class ViewController: UIViewController {
         CBtn.localizedKey = "Button"
         
     }
-    @IBOutlet weak var myView: UIView!
+ //   @IBOutlet weak var myView: UIView!
     @IBOutlet weak var CBtn: UIButton!
-
-}
-extension UILabel {
-    @IBInspectable
-    public var localizedKey: String? {
-        get { fatalError("only set this value") }
-        set {
-            if let newValue = newValue {
-                text = newValue.localized()
-            }
-        }
-    }
-}
-extension UIButton {
-    @IBInspectable
-    public var localizedKey: String? {
-        get { fatalError("only set this value") }
-        set {
-            if let newValue = newValue {
-                setTitle(newValue.localized(), for: UIControl.State.normal)
-            }
-        }
-    }
-}
-extension String {
-    func localized() -> String? {
-        return NSLocalizedString(self, comment: "")
-    }
 }
 
 /*
@@ -95,3 +67,6 @@ extension String {
      }
  }
  */
+
+
+

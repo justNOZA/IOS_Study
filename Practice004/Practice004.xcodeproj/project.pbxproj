@@ -11,13 +11,12 @@
 		963B7D3225D0D8D100147AAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D3125D0D8D100147AAA /* SceneDelegate.swift */; };
 		963B7D3425D0D8D100147AAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D3325D0D8D100147AAA /* ViewController.swift */; };
 		963B7D3725D0D8D100147AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963B7D3525D0D8D100147AAA /* Main.storyboard */; };
-		963B7D3925D0D8D200147AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963B7D3825D0D8D200147AAA /* Assets.xcassets */; };
 		963B7D3C25D0D8D200147AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963B7D3A25D0D8D200147AAA /* LaunchScreen.storyboard */; };
 		963B7D4725D0D8D200147AAA /* Practice004Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D4625D0D8D200147AAA /* Practice004Tests.swift */; };
 		963B7D5225D0D8D200147AAA /* Practice004UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D5125D0D8D200147AAA /* Practice004UITests.swift */; };
 		963B7D7125D0D93400147AAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 963B7D7325D0D93400147AAA /* Localizable.strings */; };
-		963B7D7D25D0F88B00147AAA /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D7C25D0F88B00147AAA /* DarkMode.swift */; };
-		963B7D8225D0F89900147AAA /* DarkMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963B7D8125D0F89900147AAA /* DarkMode.xib */; };
+		96BFFD7F25D1243D00FC83C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BFFD7E25D1243D00FC83C8 /* Assets.xcassets */; };
+		96BFFD8D25D1274000FC83C8 /* ExTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFFD8C25D1274000FC83C8 /* ExTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		963B7D3125D0D8D100147AAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		963B7D3325D0D8D100147AAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		963B7D3625D0D8D100147AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		963B7D3825D0D8D200147AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963B7D3B25D0D8D200147AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		963B7D3D25D0D8D200147AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963B7D4225D0D8D200147AAA /* Practice004Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practice004Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +57,8 @@
 		963B7D7225D0D93400147AAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		963B7D7725D0D93800147AAA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		963B7D7825D0D93800147AAA /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
-		963B7D7C25D0F88B00147AAA /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
-		963B7D8125D0F89900147AAA /* DarkMode.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkMode.xib; sourceTree = "<group>"; };
+		96BFFD7E25D1243D00FC83C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96BFFD8C25D1274000FC83C8 /* ExTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +112,12 @@
 				963B7D2F25D0D8D100147AAA /* AppDelegate.swift */,
 				963B7D3125D0D8D100147AAA /* SceneDelegate.swift */,
 				963B7D3325D0D8D100147AAA /* ViewController.swift */,
-				963B7D7C25D0F88B00147AAA /* DarkMode.swift */,
-				963B7D8125D0F89900147AAA /* DarkMode.xib */,
 				963B7D3525D0D8D100147AAA /* Main.storyboard */,
-				963B7D3825D0D8D200147AAA /* Assets.xcassets */,
 				963B7D3A25D0D8D200147AAA /* LaunchScreen.storyboard */,
 				963B7D3D25D0D8D200147AAA /* Info.plist */,
 				963B7D7325D0D93400147AAA /* Localizable.strings */,
+				96BFFD7E25D1243D00FC83C8 /* Assets.xcassets */,
+				96BFFD8C25D1274000FC83C8 /* ExTest.swift */,
 			);
 			path = Practice004;
 			sourceTree = "<group>";
@@ -249,9 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				963B7D3C25D0D8D200147AAA /* LaunchScreen.storyboard in Resources */,
-				963B7D8225D0F89900147AAA /* DarkMode.xib in Resources */,
 				963B7D7125D0D93400147AAA /* Localizable.strings in Resources */,
-				963B7D3925D0D8D200147AAA /* Assets.xcassets in Resources */,
+				96BFFD7F25D1243D00FC83C8 /* Assets.xcassets in Resources */,
 				963B7D3725D0D8D100147AAA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963B7D7D25D0F88B00147AAA /* DarkMode.swift in Sources */,
+				96BFFD8D25D1274000FC83C8 /* ExTest.swift in Sources */,
 				963B7D3425D0D8D100147AAA /* ViewController.swift in Sources */,
 				963B7D3025D0D8D100147AAA /* AppDelegate.swift in Sources */,
 				963B7D3225D0D8D100147AAA /* SceneDelegate.swift in Sources */,
