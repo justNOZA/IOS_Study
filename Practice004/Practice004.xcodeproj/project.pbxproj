@@ -15,8 +15,13 @@
 		963B7D4725D0D8D200147AAA /* Practice004Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D4625D0D8D200147AAA /* Practice004Tests.swift */; };
 		963B7D5225D0D8D200147AAA /* Practice004UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D5125D0D8D200147AAA /* Practice004UITests.swift */; };
 		963B7D7125D0D93400147AAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 963B7D7325D0D93400147AAA /* Localizable.strings */; };
+		965E815525D275BA00694C41 /* NavigationP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E815425D275BA00694C41 /* NavigationP.swift */; };
+		965E816225D2823B00694C41 /* PresentVT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E816125D2823B00694C41 /* PresentVT.swift */; };
 		96BFFD7F25D1243D00FC83C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BFFD7E25D1243D00FC83C8 /* Assets.xcassets */; };
 		96BFFD8D25D1274000FC83C8 /* ExTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFFD8C25D1274000FC83C8 /* ExTest.swift */; };
+		96E3798B25D226FC00F29A3F /* SegueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3798A25D226FC00F29A3F /* SegueView.swift */; };
+		96E3799025D22BC100F29A3F /* SeguePerform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3798F25D22BC100F29A3F /* SeguePerform.swift */; };
+		96E3799525D248B400F29A3F /* SegueView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3799425D248B400F29A3F /* SegueView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +62,13 @@
 		963B7D7225D0D93400147AAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		963B7D7725D0D93800147AAA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		963B7D7825D0D93800147AAA /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		965E815425D275BA00694C41 /* NavigationP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationP.swift; sourceTree = "<group>"; };
+		965E816125D2823B00694C41 /* PresentVT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentVT.swift; sourceTree = "<group>"; };
 		96BFFD7E25D1243D00FC83C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96BFFD8C25D1274000FC83C8 /* ExTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExTest.swift; sourceTree = "<group>"; };
+		96E3798A25D226FC00F29A3F /* SegueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueView.swift; sourceTree = "<group>"; };
+		96E3798F25D22BC100F29A3F /* SeguePerform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePerform.swift; sourceTree = "<group>"; };
+		96E3799425D248B400F29A3F /* SegueView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,11 @@
 				963B7D7325D0D93400147AAA /* Localizable.strings */,
 				96BFFD7E25D1243D00FC83C8 /* Assets.xcassets */,
 				96BFFD8C25D1274000FC83C8 /* ExTest.swift */,
+				96E3798A25D226FC00F29A3F /* SegueView.swift */,
+				96E3798F25D22BC100F29A3F /* SeguePerform.swift */,
+				96E3799425D248B400F29A3F /* SegueView2.swift */,
+				965E815425D275BA00694C41 /* NavigationP.swift */,
+				965E816125D2823B00694C41 /* PresentVT.swift */,
 			);
 			path = Practice004;
 			sourceTree = "<group>";
@@ -273,10 +288,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E3798B25D226FC00F29A3F /* SegueView.swift in Sources */,
 				96BFFD8D25D1274000FC83C8 /* ExTest.swift in Sources */,
 				963B7D3425D0D8D100147AAA /* ViewController.swift in Sources */,
 				963B7D3025D0D8D100147AAA /* AppDelegate.swift in Sources */,
+				965E815525D275BA00694C41 /* NavigationP.swift in Sources */,
 				963B7D3225D0D8D100147AAA /* SceneDelegate.swift in Sources */,
+				96E3799525D248B400F29A3F /* SegueView2.swift in Sources */,
+				965E816225D2823B00694C41 /* PresentVT.swift in Sources */,
+				96E3799025D22BC100F29A3F /* SeguePerform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

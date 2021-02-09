@@ -46,7 +46,6 @@ class ViewController: UIViewController {
   //  @IBOutlet weak var ModeImg: UIImageView!
     @IBOutlet weak var Greet: UILabel!
     
-//오늘은 정말 커밋 많이함
     @IBAction func CBtn(_ sender: Any) {
         /*
         Greet.text = NSLocalizedString("Hello1", comment: "")
@@ -58,6 +57,31 @@ class ViewController: UIViewController {
     }
  //   @IBOutlet weak var myView: UIView!
     @IBOutlet weak var CBtn: UIButton!
+/*
+    @IBAction func SegueBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "segueOne", sender: self)
+    }
+*/
+    @IBAction func Back(_ segue: UIStoryboardSegue){
+    }
+    
+    @IBAction func NaviBtn(_ sender: Any) {
+       if let controller =
+            self.storyboard?.instantiateViewController(withIdentifier: "naviView"){
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
+    }
+    
+    @IBAction func PresentBtn(_ sender: Any) {
+        guard let presentView = self.storyboard?.instantiateViewController(withIdentifier: "presentView")else{
+            return
+        }
+        
+        self.present(presentView, animated: true)
+    }
+    
+    
+    
 }
 
 /*
