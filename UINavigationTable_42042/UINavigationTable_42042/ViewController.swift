@@ -13,7 +13,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func NaviAction(_ sender: Any) {
+        if let move = self.storyboard?.instantiateViewController(withIdentifier: "naviPage"){
+            self.navigationController?.pushViewController(move, animated: true)
+        }
+    }
+    
 }
 
