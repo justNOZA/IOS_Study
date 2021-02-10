@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         guard let presentView = self.storyboard?.instantiateViewController(withIdentifier: "presentView")else{
             return
         }
-        
+        presentView.modalPresentationStyle = .fullScreen
         self.present(presentView, animated: true)
     }
     

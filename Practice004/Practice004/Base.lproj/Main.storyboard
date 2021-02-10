@@ -53,7 +53,7 @@
                                 <rect key="frame" x="86.5" y="652" width="44" height="30"/>
                                 <state key="normal" title="Segue"/>
                                 <connections>
-                                    <segue destination="iyh-Ez-v0d" kind="presentation" identifier="segueOne" id="wxX-Ef-tKo"/>
+                                    <segue destination="iyh-Ez-v0d" kind="presentation" identifier="segueOne" modalPresentationStyle="fullScreen" id="wxX-Ef-tKo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lM-6k-vl4">
@@ -145,11 +145,11 @@
             <objects>
                 <viewController storyboardIdentifier="segueView" id="iyh-Ez-v0d" customClass="SegueView" customModule="Practice004" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="omi-Tw-Jxq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-Mc-3La">
-                                <rect key="frame" x="190" y="406" width="34" height="30"/>
+                                <rect key="frame" x="190" y="433" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="LSD-rq-bjo" kind="unwind" unwindAction="Back:" id="h0M-2j-maa"/>
