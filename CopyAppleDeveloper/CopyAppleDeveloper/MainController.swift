@@ -83,25 +83,271 @@ class MainController: UIViewController {
      (앞)SectionIdentifierType은 각각의 섹션에 들어갈 데이터를 정의한다.
      (뒤)ItemIdentifierType은 섹션 속 아이템들에 들어갈 데이터를 정의한다.
      이 객체에 데이터를 집어 넣고 적용하면, 내부적으로 데이터를 관리해주게 된다.
+     
+     Section은 위에서 정의한 열거형 enum Section이 들어가게 되고,
+     Item으로는 위의 OutlineItem이 들어간다.
+     
+     DiffableDataSource는 개발자가 데이터의 변동을 비교적 쉽게 건드릴 수 있도록 하여, 코드의 복잡함을 줄이고, 런타임 에러를 없애기 위해 등장했다.
+     
      */
     var dataSource : UICollectionViewDiffableDataSource<Section, OutlineItem>! = nil
-    @IBOutlet weak var outlineCollectionView: UICollectionView!
+    
+    /*
+     첫 화면의 CollectionView를 설정하는 부분
+     >> AppleDeveloper에서는 코드로만 구성했으나, StoryBoard를 섞어서 진행해보는 중
+     원래 코드
      
+     */
+    var outlineCollectionView : UICollectionView! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        //첫 화면이 네비게이션이기 때문에 해당 타이틀을 설정
+        navigationItem.title = "Use Diffable DataSource"
+        
+        //CollectionView 적용
+        configureCollectionView()
+        //DataSource 적용
+        configureDataSource()
+    }
+    /*
+     lazy는 스위프트에 존재하는 지연저장 프로퍼티로
+     보통 저장 프로퍼티는 인스턴스가 생성될 시에 함께 초기화 되어 메모리에 올라가는데
+     호출되지도 않았는데 메모리에 올라간다면 메모리의 낭비가 초래된다.
+     이때 지연저장 프로퍼티를 사용하면,
+     호출되는 순간에 초기화가 되면서 매모리 소모를 줄일 수 있다.
+     하지만, 이는 그저 값만 주면 초기화되는 저장 프로퍼티가 아니기 때문에 (로직을 통해 초기화가 됨) 따라서 이를 클로져로 단 한번 실행 되도록 한다.
+     그렇기에 마지막에 ()를 반드시 붙여줘야 한다.
+     
+      Clousure클로저란?
+     클로저는 사용자의 코드 안에서 전달되어 사용할 수 있는 로직을 가진 중괄호로 구분된 코드의 블럭이며, 일급 객체의 역할을 할 수 있다.
+     전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달 할 수 있으며, 함수의 반환 값이 될수도 있다.
+     참조 타입
+     함수는 클로저의 한 형태로, 이름이 있는 클로져가 함수이다.
+     표현 방식 은
+     {(인자들) -> 변환 타입 in
+        로직
+     }
+     in을 기점으로 파라미터, 반환타입 영역과 실제 클로저의 코드를 분리하고 있다.
+     
+     아래의 함수는 첫 화면에 나타낼 메뉴의 가지수를 정하고 있다.
+     */
+    private lazy var menuItem: [OutlineItem] = {
+        return [
+            OutlineItem(a: "Compositional Layout", c: [
+                OutlineItem(a: "Advanced Layouts", c: [
+                    OutlineItem(a: "Orthogonal Sections", c: [
+                        OutlineItem(a: "Orthogonal Sections", b: FirstViewController.self),
+                        OutlineItem(a: "Orthogonal Section Behaviors", b: SecondViewController.self)
+                    ])
+                ]),
+                OutlineItem(a: "Conference App", c:[
+                    OutlineItem(a: "Video", b: VideoViewController.self)
+                ])
+            ]),
+            OutlineItem(a: "Diffable Data Source", c: [
+                OutlineItem(a: "Mountains Search", b: MoutainViewController.self),
+                OutlineItem(a: "Insertion Sort Visualization", b: InsertionSortViewController.self)
+            ]),
+            OutlineItem(a: "Outlines", c: [
+                OutlineItem(a: "Emoji Explorer", b: EmojiExplorerViewController.self),
+                OutlineItem(a: "Emoji Explorer - List", b: EmojiExplorerListViewController.self)
+            ]),
+            OutlineItem(a: "#42081 AppStoreみたいな画面", b:PracticeViewController.self)
+        ]
+    }()
+}
+
+/*
+ Extension이란, 구조체, 클래스, 열거형, 프로토콜 타입에 새로운 기능을 추가할 때 사용하는 기능
+ 새로운 기능을 추가할 수는 있지만, 기존에 존재하던 기능을 재정의 할 수는 없다.
+ 상속은 특정 타입을 물려받아 새로운 타입을 정의하고 추가 기능을 정의하는 수직확장이지만,
+ 익스텐션은 기존의 타입에 기능을 추가하는 수평확장이다.
+ 
+ 외부에서 가져온 원본 소스는 수정할 수 없기 때문에 내가 원하는 기능을 추가하고 싶을 때 사용하는 것도 가능하다.
+ */
+extension MainController {
+    
+    //collectionView설정
+    func configureCollectionView(){
+        /*
+         generateLayout을 통해 레이아웃을 받고, 뷰의 경게선을 통해 프레임을 구축하여 CollectionView에 적용할 변수를 생성한다.
+         위에서 설정된 변수를 reciever의 하위 보기 목록 끝에 보기를 추가한다.
+         >> view가 추가가 되는데, 추가된 view는 다른 하위 항목 위에 나타나게 된다 ??
+         */
+        let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: generateLayout())
+        view.addSubview(collectionView)
+        
+        /*
+         상위 뷰가 변경될 때 크기를 조정하는 방법을 결정한다. CollectionView의 크기를 조정하는데
+         view의 한계가 변경되면, 해당 view는 각 하위 view의autoresizingMask에 따라 크기를 자동으로 조정하게 된다.
+         */
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        //collectionView의 뒷 배경 색깔을 지정
+        collectionView.backgroundColor = .systemGroupedBackground
+        //CollectionView에 정의한 내용들을 입력
+        self.outlineCollectionView = collectionView
+        //delegate 연결
+        collectionView.delegate = self
     }
     
+    //DataSource설정
+    func configureDataSource(){
+        
+        let containerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, OutlineItem> {
+            (cell, indexPath, menuItem) in
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = menuItem.title
+            contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .headline)
+            cell.contentConfiguration = contentConfiguration
+            
+            let disclosureOptions = UICellAccessory.OutlineDisclosureOptions(style: .header)
+            cell.accessories = [.outlineDisclosure(options: disclosureOptions)]
+            cell.backgroundConfiguration = UIBackgroundConfiguration.clear()
+        }
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, OutlineItem> { cell, indexPath, menuItem in
+            // Populate the cell with our item description.
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = menuItem.title
+            cell.contentConfiguration = contentConfiguration
+            cell.backgroundConfiguration = UIBackgroundConfiguration.clear()
+        }
+        
+        dataSource = UICollectionViewDiffableDataSource<Section, OutlineItem>(collectionView: outlineCollectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, item: OutlineItem) -> UICollectionViewCell? in
+            // Return the cell.
+            if item.subitems.isEmpty {
+                return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+            } else {
+                return collectionView.dequeueConfiguredReusableCell(using: containerCellRegistration, for: indexPath, item: item)
+            }
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // load our initial data
+        let snapshot = initialSnapshot()
+        self.dataSource.apply(snapshot, to: .main, animatingDifferences: false)
     }
-    */
+    
+    /*
+     Layout을 생성하는 함수인 듯 하다.
+     함수의 매개변수는 없고, 반환하는 타입은 UICollectionViewLayout타입을 반환한다. (레이아웃을 반환하는 것)
+     */
+    func generateLayout() -> UICollectionViewLayout{
+        /*
+         Layout의 목록 설정 타입을 받아와서 사이드 바 형식으로 나타내는 것 같다.
+         종류에는
+         .sidebar
+         .plain
+         .sidebarPlain
+         .grouped
+         .insetGrouped 가 있는데 목록이 출력되는 것에 있어 영향을 끼친다. (https://useyourloaf.com/blog/creating-lists-with-collection-view/)를 참고하면 좋을 듯하다.
+         */
+        let listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebar)
+        /*
+         매우 적응적이고, 유연한 시각적 배열로 항목을 결합할 수 있는 레이아웃 객체이다.
+         하나이상의 Section으로 구성되는데, 각 section은 표시할 데이터의 최소 단위인 개별 항목의 그룹으로 구성된다.
+         그룹은 항목을 수평 행, 수직 열 또는 사용자 정의 배열로 배치할 수 있다.
+         */
+        let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
+        /*
+         항목을 결합한 레이아웃을 리턴
+         */
+        return layout
+    }
+    
+    /*
+     데이터의 상태 보낸다고 생각하면 된다.
+     */
+    func initialSnapshot() -> NSDiffableDataSourceSectionSnapshot<OutlineItem>{
+        /*
+         NSDiffableDataSourceDectionSnapshot은
+         특정 시점의 레이아웃 섹션에 있는 데이터의 상태를 나타낸다.
+         */
+        var snapshot = NSDiffableDataSourceSectionSnapshot<OutlineItem>()
+        
+        /*
+         실행 함수, 리턴값이 존재하지 않는다.
+         outlineItem배열을 받아서 처리한다.
+         _ 와 to 는 전달 인자이며, 함수 내부에선, menuItems와  parent로 사용한다.
+         */
+        func addItem(_ menuItems: [OutlineItem], to parent: OutlineItem?){
+//            print(String(menuItems.count), "a")
+            //snapshot의 append함수에 menuItem와 parent(nil)값을 전달
+            snapshot.append(menuItems, to : parent)
+            /*
+             for문을 시작하는데
+             menuitems의 첫번째 menuitem에 하위 항목이 비어있지 않으면 반복문을 실행, 그렇지 않으면 나온다.
+             */
+            for menuItem in menuItems where !menuItem.subitems.isEmpty {
+//                print("b")
+                /*
+                 들어가서 하위 항목과 menuitem자체를 addItem에 보내는데
+                 구조상 하위 항목이 없을 때까지 이 행동을 반복하게 된다.
+                */
+                addItem(menuItem.subitems, to: menuItem)
+            }
+            /*
+             이렇게 반복문을 빠져나오고 이젠 그 다음 항목의 하위항목을 체크
+             없다면 다시 빠져 나오는 방식으로
+             처음의 항목을 나타내고, 각 첫번째 항목의 하위항목을 검사하여 가장 밑바닥까지 확인을해서 모든 항목을 꺼내온다.
+             */
+//            print("v")
+        }
+        /*
+         addItem으로 menuItem 값으로 menuItem(MainController의  menuItem을 호출)을 전달
+         parent의 값은  OutlineItem? 옵셔널이기 때문에 nil로 전달
+         */
+        addItem(menuItem, to: nil)
+        //위의 함수를 이용하여 snapshot에는 모든 항목의 상태가 저장된 상태로 리턴을 하는 것
+        return snapshot
+    }
+}
 
+/*
+ UICollectionViewDelegate의 상속을 받고 있다.
+ Delegate는 컨텐츠의 표현, 사용자와의 상호작용과 관련된 측면을 관리하는 객체이다.
+ 셀을 강조하거나, 선택하여 표시하는 역할을 하고 있다.
+ 기능을 확장하여, 셀의 크기, 간격과 같은 레이아웃 설정도 가능하다.
+ */
+extension MainController: UICollectionViewDelegate{
+    
+    //Delegate를 상속받았기 때문에 이 함수를 정의해주어야 한다.
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /*
+         guard는 스위프트의 조건문의 표현식 중 하나로, else가 반드시 필요하다.
+         guard뒤의 코드의 실행 결과가 true일 경우에 코드가 계속 실행한다.
+         guard뒤의 Bool값이 false라면, else를 실행하는데 else 구문의 블록 내부에는 꼭 자신보다 상위의 코드 블록을 종료하는 코드가 들어가게 된다.
+         if에 비해 훨씬 간결하고, 읽기 좋게 구성할 수 있다.
+         
+          menuItem이 nil값이 아니라면 계속 진행 될 것이다.
+          Item의 indexPath값을 토대로 identifierType값을 가져온다???
+         */
+        guard let menuItem = self.dataSource.itemIdentifier(for: indexPath) else {return}
+        
+        //???
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        /*
+         Optional이란
+         값이 있을 수도 있고, nil일 수도 있는 것을 나타낼때 사용하는데 변수의 뒤에 ?를 붙여준다.
+         nil값인 상태를 사용하려 할 때 오류가 날 수 있기 때문에 이를 꼭 확인해서 써야 한다.
+         Optional Binding
+         if 조건문을 이용하여, optional값이 존재하면 그 값을 변수에 대입시켜준다. 그리고 이하의 if문을 실행한다.
+         optional Chaning
+         optional binding과정을 ? 키워드로 줄여주는 역할을 한다.
+         if let viewController = menuItem.outlineViewController {
+            if let navigartionController = navigaionController, navigationController.pushViewController{
+                ...
+            } else {
+                ...
+            }
+         }
+          이런 느낌이려나???
+         */
+        if let viewController = menuItem.outlineViewControl{
+            navigationController?.pushViewController(viewController.init(), animated: true)
+        }
+        // 여튼 nil이 아닐경우 화면에 출력하는 부분인듯함??s
+    }
 }
