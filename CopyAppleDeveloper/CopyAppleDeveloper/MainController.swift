@@ -194,38 +194,74 @@ extension MainController {
     
     //DataSource설정
     func configureDataSource(){
-        
+        /*
+         containerCellRegistration 변수
+         UICollectionView.CellResitration<>값이 nil값인지 확인
+         >> Collection Cell의 등록 -> 셀을 collection View에 등록하고, 각 셀을 표시하도록 구성한다.
+         --> UICollectionViewListCell유형의 셀에 대한 셀 등록을 생성하여, 시스템 기본 스타일을 통해 콘텐츠 구성을 만들고, 내용, 모양을 정의하여 셀에 할당한다.
+         nil이 아닐 경우
+         
+         변수애 해당 값을 넣고, (cell, indexPath, menuItem)를 각 매개타입으로 가지고, 반환 값이 없는 함수를 실행
+         */
         let containerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, OutlineItem> {
             (cell, indexPath, menuItem) in
+            //셀의 스타일에 대한 기본 목록 내용 구성을 검색하여 UIContentConfiguration값으로 저장한다.
             var contentConfiguration = cell.defaultContentConfiguration()
+            //셀 내용에 텍스트를 추가하여, 메뉴아이템이 들어있는 title값을 적어낸다.
             contentConfiguration.text = menuItem.title
+            //텍스트의 포트를 설정한다.
             contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .headline)
+            //새롭게 정의된 셀의 스타일을 셀에 적용시켜준다.
             cell.contentConfiguration = contentConfiguration
             
+            //개요를 공개할 떼에 관한 구성 옵션 설정
             let disclosureOptions = UICellAccessory.OutlineDisclosureOptions(style: .header)
+            //개요 공개에 관한 부수적인 옵션 설정 _ 위에서 만든 값을 옵션으로 추가
             cell.accessories = [.outlineDisclosure(options: disclosureOptions)]
+            //배경에 있는 구성요소를 깨끗하게 지워버림(투명한 배경을 생성하는 Clear를 사용하여 빈 배경 구성을 만드는 것으로 시작)
             cell.backgroundConfiguration = UIBackgroundConfiguration.clear()
         }
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, OutlineItem> { cell, indexPath, menuItem in
+        // 다시금 새로운 변수에 셀 모양을 정의하여 적용한다.
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, OutlineItem> {
+            (cell, indexPath, menuItem) in
             // Populate the cell with our item description.
             var contentConfiguration = cell.defaultContentConfiguration()
             contentConfiguration.text = menuItem.title
             cell.contentConfiguration = contentConfiguration
             cell.backgroundConfiguration = UIBackgroundConfiguration.clear()
         }
-        
+        //위와 똑같은 작업을 하지만, 폰트에는 아무 효과를 주지 않았다. 그리고, 공개 옵션도 설정하지 않았다.
+//        print(1)
+//        print(dataSource)
+        /*
+         DiffableDataSource변수에 값을 초기화
+         다시금 말하지만,UICollectionViewDiffableDataSource는 데이터를 관리하고, CollectionView의 셀을 제공하는데 사용하는 오브젝트이다.
+         CollectionView를 데이터로 채우기 위해 -> 다른 데이터 소스를 ColelctionView에 연결 -> 셀 공급자를 구현하여 CollectionView의 셀을 구성
+         -> 데이터의 현재 상태를 생성 -> UI에 데이터를 표시
+         outlineCollectionViewㅇ로 부터 데이터 값을 가져옴 ??
+         함수 실행 (UICollectionViewCell값을 반환)
+         */
+        // 여기 들어 오기 전엔 nil값
         dataSource = UICollectionViewDiffableDataSource<Section, OutlineItem>(collectionView: outlineCollectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, item: OutlineItem) -> UICollectionViewCell? in
             // Return the cell.
+            print("v")
             if item.subitems.isEmpty {
+                //하위 항목이 없을 경우 cellRegistration을 넣어서 CollectionView에 보낸다.
                 return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
             } else {
+                //하위 항목이 읶을 경우 containerCellRegistration로 설정한 것을 보낸다.
                 return collectionView.dequeueConfiguredReusableCell(using: containerCellRegistration, for: indexPath, item: item)
             }
         }
-
+        //처음에 dataSource의 클로저 함수에는 도달하지 못하지만, 초기화가 되었기 때문에 dataSource에 접근이 가능해짐
+        //띠라서 맨 마지막 문장이 위에 올라가면, nil값에 의한 오류가 발생하지만, 초기화 이후라면, 오류가 발생하지 않게 된다.
+//        print(2)
+//        print(dataSource)
         // load our initial data
+        // 처음으로 데이터를 정리해서 가져와 준다.(항목별), 처음에는 데이터소스가 nil값이라 여기부터 실행한다고 생각하면 됨
         let snapshot = initialSnapshot()
+        //snapshot 값을 데이터 소스에 적용
         self.dataSource.apply(snapshot, to: .main, animatingDifferences: false)
     }
     
