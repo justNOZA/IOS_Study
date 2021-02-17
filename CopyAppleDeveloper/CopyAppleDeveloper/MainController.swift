@@ -147,12 +147,10 @@ class MainController: UIViewController {
                 ])
             ]),
             OutlineItem(a: "Diffable Data Source", c: [
-                OutlineItem(a: "Mountains Search", b: MoutainViewController.self),
                 OutlineItem(a: "Insertion Sort Visualization", b: InsertionSortViewController.self)
             ]),
             OutlineItem(a: "Outlines", c: [
-                OutlineItem(a: "Emoji Explorer", b: EmojiExplorerViewController.self),
-                OutlineItem(a: "Emoji Explorer - List", b: EmojiExplorerListViewController.self)
+                OutlineItem(a: "Emoji Explorer", b: EmojiExplorerViewController.self)
             ]),
             OutlineItem(a: "#42081 AppStoreみたいな画面", b:PracticeViewController.self)
         ]

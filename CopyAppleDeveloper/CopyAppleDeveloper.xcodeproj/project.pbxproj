@@ -10,10 +10,8 @@
 		9609610425DCA5DA001BC04F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609610325DCA5DA001BC04F /* FirstViewController.swift */; };
 		9609610725DCA5EC001BC04F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609610625DCA5EC001BC04F /* SecondViewController.swift */; };
 		9609610A25DCA5F4001BC04F /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609610925DCA5F4001BC04F /* VideoViewController.swift */; };
-		9609610F25DCA84E001BC04F /* MoutainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609610E25DCA84E001BC04F /* MoutainViewController.swift */; };
 		9609611325DCA878001BC04F /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611225DCA878001BC04F /* InsertionSortViewController.swift */; };
 		9609611725DCA8E6001BC04F /* EmojiExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611625DCA8E6001BC04F /* EmojiExplorerViewController.swift */; };
-		9609611B25DCA901001BC04F /* EmojiExplorerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611A25DCA901001BC04F /* EmojiExplorerListViewController.swift */; };
 		9609611E25DCA96E001BC04F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611D25DCA96E001BC04F /* PracticeViewController.swift */; };
 		960F0D6B25DBA711004E1EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F0D6A25DBA711004E1EC1 /* AppDelegate.swift */; };
 		960F0D6D25DBA711004E1EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F0D6C25DBA711004E1EC1 /* SceneDelegate.swift */; };
@@ -21,16 +19,24 @@
 		960F0D7425DBA711004E1EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960F0D7325DBA711004E1EC1 /* Assets.xcassets */; };
 		960F0D7725DBA711004E1EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960F0D7525DBA711004E1EC1 /* LaunchScreen.storyboard */; };
 		960F0D8825DBAA3F004E1EC1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F0D8725DBAA3F004E1EC1 /* MainController.swift */; };
+		96F5F5AA25DCF89A00D232FD /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5A925DCF89A00D232FD /* TextCell.swift */; };
+		96F5F5AF25DCF95300D232FD /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5AE25DCF95300D232FD /* Support.swift */; };
+		96F5F5B225DCF9FD00D232FD /* BadgeSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B125DCF9FD00D232FD /* BadgeSupplementaryView.swift */; };
+		96F5F5B525DD00F100D232FD /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B425DD00F100D232FD /* Emoji.swift */; };
+		96F5F5B825DD013500D232FD /* EmojiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B725DD013500D232FD /* EmojiDetailViewController.swift */; };
+		96F5F5BD25DD01BB00D232FD /* InsertSortArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5BC25DD01BB00D232FD /* InsertSortArray.swift */; };
+		96F5F5C025DD029C00D232FD /* ConferenceVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5BF25DD029C00D232FD /* ConferenceVideoController.swift */; };
+		96F5F5C325DD034400D232FD /* TitleSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5C225DD034400D232FD /* TitleSupplementaryView.swift */; };
+		96F5F5C625DD043700D232FD /* ConferenceVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5C525DD043700D232FD /* ConferenceVideoCell.swift */; };
+		96F5F5CA25DD05BA00D232FD /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5C925DD05BA00D232FD /* PracticeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9609610325DCA5DA001BC04F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		9609610625DCA5EC001BC04F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9609610925DCA5F4001BC04F /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		9609610E25DCA84E001BC04F /* MoutainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoutainViewController.swift; sourceTree = "<group>"; };
 		9609611225DCA878001BC04F /* InsertionSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 		9609611625DCA8E6001BC04F /* EmojiExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiExplorerViewController.swift; sourceTree = "<group>"; };
-		9609611A25DCA901001BC04F /* EmojiExplorerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiExplorerListViewController.swift; sourceTree = "<group>"; };
 		9609611D25DCA96E001BC04F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		960F0D6725DBA711004E1EC1 /* CopyAppleDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyAppleDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960F0D6A25DBA711004E1EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +46,16 @@
 		960F0D7625DBA711004E1EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		960F0D7825DBA711004E1EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960F0D8725DBAA3F004E1EC1 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		96F5F5A925DCF89A00D232FD /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		96F5F5AE25DCF95300D232FD /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		96F5F5B125DCF9FD00D232FD /* BadgeSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSupplementaryView.swift; sourceTree = "<group>"; };
+		96F5F5B425DD00F100D232FD /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		96F5F5B725DD013500D232FD /* EmojiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailViewController.swift; sourceTree = "<group>"; };
+		96F5F5BC25DD01BB00D232FD /* InsertSortArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSortArray.swift; sourceTree = "<group>"; };
+		96F5F5BF25DD029C00D232FD /* ConferenceVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceVideoController.swift; sourceTree = "<group>"; };
+		96F5F5C225DD034400D232FD /* TitleSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSupplementaryView.swift; sourceTree = "<group>"; };
+		96F5F5C525DD043700D232FD /* ConferenceVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceVideoCell.swift; sourceTree = "<group>"; };
+		96F5F5C925DD05BA00D232FD /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,8 @@
 				9609610925DCA5F4001BC04F /* VideoViewController.swift */,
 				9609610625DCA5EC001BC04F /* SecondViewController.swift */,
 				9609610325DCA5DA001BC04F /* FirstViewController.swift */,
+				96F5F5BF25DD029C00D232FD /* ConferenceVideoController.swift */,
+				96F5F5C225DD034400D232FD /* TitleSupplementaryView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -66,8 +84,8 @@
 		9609610D25DCA83B001BC04F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9609610E25DCA84E001BC04F /* MoutainViewController.swift */,
 				9609611225DCA878001BC04F /* InsertionSortViewController.swift */,
+				96F5F5BC25DD01BB00D232FD /* InsertSortArray.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -76,7 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				9609611625DCA8E6001BC04F /* EmojiExplorerViewController.swift */,
-				9609611A25DCA901001BC04F /* EmojiExplorerListViewController.swift */,
+				96F5F5B425DD00F100D232FD /* Emoji.swift */,
+				96F5F5B725DD013500D232FD /* EmojiDetailViewController.swift */,
 			);
 			path = Emoji;
 			sourceTree = "<group>";
@@ -100,6 +119,7 @@
 		960F0D6925DBA711004E1EC1 /* CopyAppleDeveloper */ = {
 			isa = PBXGroup;
 			children = (
+				96F5F5C825DD057A00D232FD /* 42081 */,
 				960F0D8025DBA731004E1EC1 /* Controller */,
 				960F0D7025DBA711004E1EC1 /* Main.storyboard */,
 				960F0D6A25DBA711004E1EC1 /* AppDelegate.swift */,
@@ -115,12 +135,32 @@
 		960F0D8025DBA731004E1EC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				96F5F5AC25DCF8A500D232FD /* Supply */,
 				9609611525DCA8CF001BC04F /* Emoji */,
 				9609610D25DCA83B001BC04F /* Data */,
 				9609610C25DCA82A001BC04F /* Layout */,
 				9609611D25DCA96E001BC04F /* PracticeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		96F5F5AC25DCF8A500D232FD /* Supply */ = {
+			isa = PBXGroup;
+			children = (
+				96F5F5A925DCF89A00D232FD /* TextCell.swift */,
+				96F5F5AE25DCF95300D232FD /* Support.swift */,
+				96F5F5B125DCF9FD00D232FD /* BadgeSupplementaryView.swift */,
+				96F5F5C525DD043700D232FD /* ConferenceVideoCell.swift */,
+			);
+			path = Supply;
+			sourceTree = "<group>";
+		};
+		96F5F5C825DD057A00D232FD /* 42081 */ = {
+			isa = PBXGroup;
+			children = (
+				96F5F5C925DD05BA00D232FD /* PracticeViewController.swift */,
+			);
+			path = 42081;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,16 +233,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F5F5C325DD034400D232FD /* TitleSupplementaryView.swift in Sources */,
+				96F5F5B825DD013500D232FD /* EmojiDetailViewController.swift in Sources */,
+				96F5F5B525DD00F100D232FD /* Emoji.swift in Sources */,
 				9609611E25DCA96E001BC04F /* PracticeViewController.swift in Sources */,
 				960F0D6B25DBA711004E1EC1 /* AppDelegate.swift in Sources */,
 				9609611725DCA8E6001BC04F /* EmojiExplorerViewController.swift in Sources */,
-				9609610F25DCA84E001BC04F /* MoutainViewController.swift in Sources */,
 				9609611325DCA878001BC04F /* InsertionSortViewController.swift in Sources */,
-				9609611B25DCA901001BC04F /* EmojiExplorerListViewController.swift in Sources */,
+				96F5F5BD25DD01BB00D232FD /* InsertSortArray.swift in Sources */,
 				960F0D8825DBAA3F004E1EC1 /* MainController.swift in Sources */,
 				9609610A25DCA5F4001BC04F /* VideoViewController.swift in Sources */,
 				960F0D6D25DBA711004E1EC1 /* SceneDelegate.swift in Sources */,
+				96F5F5AF25DCF95300D232FD /* Support.swift in Sources */,
 				9609610725DCA5EC001BC04F /* SecondViewController.swift in Sources */,
+				96F5F5C625DD043700D232FD /* ConferenceVideoCell.swift in Sources */,
+				96F5F5CA25DD05BA00D232FD /* PracticeViewController.swift in Sources */,
+				96F5F5AA25DCF89A00D232FD /* TextCell.swift in Sources */,
+				96F5F5C025DD029C00D232FD /* ConferenceVideoController.swift in Sources */,
+				96F5F5B225DCF9FD00D232FD /* BadgeSupplementaryView.swift in Sources */,
 				9609610425DCA5DA001BC04F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
