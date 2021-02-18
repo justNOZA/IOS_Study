@@ -20,7 +20,7 @@ class EmojiExplorerViewController: UIViewController {
             }
         }
     }
-    
+
     struct Item: Hashable {
         let title: String?
         let emoji: Emoji?
@@ -32,7 +32,7 @@ class EmojiExplorerViewController: UIViewController {
         }
         private let identifier = UUID()
     }
-    
+
     var starredEmojis = Set<Item>()
     
     var collectionView: UICollectionView!
@@ -63,7 +63,6 @@ extension EmojiExplorerViewController {
         view.addSubview(collectionView)
     }
     
-    /// - Tag: CreateFullLayout
     func createLayout() -> UICollectionViewLayout {
         
         let sectionProvider = { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
@@ -169,7 +168,7 @@ extension EmojiExplorerViewController {
         starAction.backgroundColor = .systemBlue
         return UISwipeActionsConfiguration(actions: [starAction])
     }
-    
+    //"""""
     func createGridCellRegistration() -> UICollectionView.CellRegistration<UICollectionViewCell, Emoji> {
         return UICollectionView.CellRegistration<UICollectionViewCell, Emoji> { (cell, indexPath, emoji) in
             var content = UIListContentConfiguration.cell()
@@ -216,7 +215,7 @@ extension EmojiExplorerViewController {
             cell.accessories = self.accessoriesForListCellItem(item)
         }
     }
-    
+    //""""
     /// - Tag: DequeueCells
     func configureDataSource() {
         // create registrations up front, then choose the appropriate one to use in the cell provider

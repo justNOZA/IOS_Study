@@ -12,7 +12,9 @@
 		9609610A25DCA5F4001BC04F /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609610925DCA5F4001BC04F /* VideoViewController.swift */; };
 		9609611325DCA878001BC04F /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611225DCA878001BC04F /* InsertionSortViewController.swift */; };
 		9609611725DCA8E6001BC04F /* EmojiExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611625DCA8E6001BC04F /* EmojiExplorerViewController.swift */; };
-		9609611E25DCA96E001BC04F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609611D25DCA96E001BC04F /* PracticeViewController.swift */; };
+		960A61FA25DDF0AA00AA7A95 /* PracticeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A61F925DDF0AA00AA7A95 /* PracticeSupport.swift */; };
+		960A620125DDFA2800AA7A95 /* PracticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A620025DDFA2800AA7A95 /* PracticeCell.swift */; };
+		960A620525DE61A400AA7A95 /* PracticeCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A620425DE61A400AA7A95 /* PracticeCell2.swift */; };
 		960F0D6B25DBA711004E1EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F0D6A25DBA711004E1EC1 /* AppDelegate.swift */; };
 		960F0D6D25DBA711004E1EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F0D6C25DBA711004E1EC1 /* SceneDelegate.swift */; };
 		960F0D7225DBA711004E1EC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960F0D7025DBA711004E1EC1 /* Main.storyboard */; };
@@ -22,7 +24,7 @@
 		96F5F5AA25DCF89A00D232FD /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5A925DCF89A00D232FD /* TextCell.swift */; };
 		96F5F5AF25DCF95300D232FD /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5AE25DCF95300D232FD /* Support.swift */; };
 		96F5F5B225DCF9FD00D232FD /* BadgeSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B125DCF9FD00D232FD /* BadgeSupplementaryView.swift */; };
-		96F5F5B525DD00F100D232FD /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B425DD00F100D232FD /* Emoji.swift */; };
+		96F5F5B525DD00F100D232FD /* EmojiFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B425DD00F100D232FD /* EmojiFile.swift */; };
 		96F5F5B825DD013500D232FD /* EmojiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5B725DD013500D232FD /* EmojiDetailViewController.swift */; };
 		96F5F5BD25DD01BB00D232FD /* InsertSortArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5BC25DD01BB00D232FD /* InsertSortArray.swift */; };
 		96F5F5C025DD029C00D232FD /* ConferenceVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5F5BF25DD029C00D232FD /* ConferenceVideoController.swift */; };
@@ -37,7 +39,9 @@
 		9609610925DCA5F4001BC04F /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		9609611225DCA878001BC04F /* InsertionSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 		9609611625DCA8E6001BC04F /* EmojiExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiExplorerViewController.swift; sourceTree = "<group>"; };
-		9609611D25DCA96E001BC04F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		960A61F925DDF0AA00AA7A95 /* PracticeSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSupport.swift; sourceTree = "<group>"; };
+		960A620025DDFA2800AA7A95 /* PracticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCell.swift; sourceTree = "<group>"; };
+		960A620425DE61A400AA7A95 /* PracticeCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCell2.swift; sourceTree = "<group>"; };
 		960F0D6725DBA711004E1EC1 /* CopyAppleDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyAppleDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960F0D6A25DBA711004E1EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960F0D6C25DBA711004E1EC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +53,7 @@
 		96F5F5A925DCF89A00D232FD /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		96F5F5AE25DCF95300D232FD /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		96F5F5B125DCF9FD00D232FD /* BadgeSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSupplementaryView.swift; sourceTree = "<group>"; };
-		96F5F5B425DD00F100D232FD /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		96F5F5B425DD00F100D232FD /* EmojiFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFile.swift; sourceTree = "<group>"; };
 		96F5F5B725DD013500D232FD /* EmojiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailViewController.swift; sourceTree = "<group>"; };
 		96F5F5BC25DD01BB00D232FD /* InsertSortArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSortArray.swift; sourceTree = "<group>"; };
 		96F5F5BF25DD029C00D232FD /* ConferenceVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceVideoController.swift; sourceTree = "<group>"; };
@@ -76,7 +80,6 @@
 				9609610625DCA5EC001BC04F /* SecondViewController.swift */,
 				9609610325DCA5DA001BC04F /* FirstViewController.swift */,
 				96F5F5BF25DD029C00D232FD /* ConferenceVideoController.swift */,
-				96F5F5C225DD034400D232FD /* TitleSupplementaryView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -94,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				9609611625DCA8E6001BC04F /* EmojiExplorerViewController.swift */,
-				96F5F5B425DD00F100D232FD /* Emoji.swift */,
+				96F5F5B425DD00F100D232FD /* EmojiFile.swift */,
 				96F5F5B725DD013500D232FD /* EmojiDetailViewController.swift */,
 			);
 			path = Emoji;
@@ -139,7 +142,6 @@
 				9609611525DCA8CF001BC04F /* Emoji */,
 				9609610D25DCA83B001BC04F /* Data */,
 				9609610C25DCA82A001BC04F /* Layout */,
-				9609611D25DCA96E001BC04F /* PracticeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,7 +160,11 @@
 		96F5F5C825DD057A00D232FD /* 42081 */ = {
 			isa = PBXGroup;
 			children = (
+				96F5F5C225DD034400D232FD /* TitleSupplementaryView.swift */,
 				96F5F5C925DD05BA00D232FD /* PracticeViewController.swift */,
+				960A61F925DDF0AA00AA7A95 /* PracticeSupport.swift */,
+				960A620025DDFA2800AA7A95 /* PracticeCell.swift */,
+				960A620425DE61A400AA7A95 /* PracticeCell2.swift */,
 			);
 			path = 42081;
 			sourceTree = "<group>";
@@ -233,10 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960A620125DDFA2800AA7A95 /* PracticeCell.swift in Sources */,
 				96F5F5C325DD034400D232FD /* TitleSupplementaryView.swift in Sources */,
 				96F5F5B825DD013500D232FD /* EmojiDetailViewController.swift in Sources */,
-				96F5F5B525DD00F100D232FD /* Emoji.swift in Sources */,
-				9609611E25DCA96E001BC04F /* PracticeViewController.swift in Sources */,
+				96F5F5B525DD00F100D232FD /* EmojiFile.swift in Sources */,
 				960F0D6B25DBA711004E1EC1 /* AppDelegate.swift in Sources */,
 				9609611725DCA8E6001BC04F /* EmojiExplorerViewController.swift in Sources */,
 				9609611325DCA878001BC04F /* InsertionSortViewController.swift in Sources */,
@@ -249,7 +255,9 @@
 				96F5F5C625DD043700D232FD /* ConferenceVideoCell.swift in Sources */,
 				96F5F5CA25DD05BA00D232FD /* PracticeViewController.swift in Sources */,
 				96F5F5AA25DCF89A00D232FD /* TextCell.swift in Sources */,
+				960A61FA25DDF0AA00AA7A95 /* PracticeSupport.swift in Sources */,
 				96F5F5C025DD029C00D232FD /* ConferenceVideoController.swift in Sources */,
+				960A620525DE61A400AA7A95 /* PracticeCell2.swift in Sources */,
 				96F5F5B225DCF9FD00D232FD /* BadgeSupplementaryView.swift in Sources */,
 				9609610425DCA5DA001BC04F /* FirstViewController.swift in Sources */,
 			);

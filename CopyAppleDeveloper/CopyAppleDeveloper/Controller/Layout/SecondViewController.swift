@@ -80,14 +80,14 @@ extension SecondViewController {
             let trailingGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0)),
                                                                  subitem: trailingItem,
-                                                                 count: 2)
+                                                                 count: 1)
 
             let orthogonallyScrolls = sectionKind.orthogonalScrollingBehavior() != .none
             let containerGroupFractionalWidth = orthogonallyScrolls ? CGFloat(0.85) : CGFloat(1.0)
             let containerGroup = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(containerGroupFractionalWidth),
                                                   heightDimension: .fractionalHeight(0.4)),
-                subitems: [leadingItem, trailingGroup])
+                subitems: [trailingGroup, leadingItem])
             let section = NSCollectionLayoutSection(group: containerGroup)
             section.orthogonalScrollingBehavior = sectionKind.orthogonalScrollingBehavior()
 

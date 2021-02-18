@@ -19,7 +19,7 @@ class TitleSupplementaryView: UICollectionReusableView {
         fatalError()
     }
 }
-
+//Title 제약 조건 등 설정
 extension TitleSupplementaryView {
     func configure() {
         addSubview(label)

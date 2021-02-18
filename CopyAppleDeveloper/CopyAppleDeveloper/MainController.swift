@@ -243,7 +243,7 @@ extension MainController {
         dataSource = UICollectionViewDiffableDataSource<Section, OutlineItem>(collectionView: outlineCollectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, item: OutlineItem) -> UICollectionViewCell? in
             // Return the cell.
-            print("v")
+//            print("v")
             if item.subitems.isEmpty {
                 //하위 항목이 없을 경우 cellRegistration을 넣어서 CollectionView에 보낸다.
                 return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
