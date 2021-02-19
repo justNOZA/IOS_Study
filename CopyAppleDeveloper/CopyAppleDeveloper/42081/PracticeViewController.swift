@@ -14,12 +14,18 @@ class PracticeViewController: UIViewController {
     let practiceController = PracticeSupport()
     //CollectionView 선언
     var collectionView: UICollectionView! = nil
+//    //Diffable DataSource의 선언
+//    var dataSource: UICollectionViewDiffableDataSource
+//        <PracticeSupport.ListCollection, PracticeSupport.StoreList>! = nil
+//    //snapshot의 선언
+//    var currentSnapshot: NSDiffableDataSourceSnapshot
+//        <PracticeSupport.ListCollection, PracticeSupport.StoreList>! = nil
     //Diffable DataSource의 선언
     var dataSource: UICollectionViewDiffableDataSource
-        <PracticeSupport.ListCollection, PracticeSupport.StoreList>! = nil
+        <PracticeSupport.ListCollection2, PracticeSupport.StoreList2>! = nil
     //snapshot의 선언
     var currentSnapshot: NSDiffableDataSourceSnapshot
-        <PracticeSupport.ListCollection, PracticeSupport.StoreList>! = nil
+        <PracticeSupport.ListCollection2, PracticeSupport.StoreList2>! = nil
     
     static let titleElementKind = "title-element-kind"
 
@@ -45,8 +51,8 @@ extension PracticeViewController {
             let section: NSCollectionLayoutSection
             
             //Section을 구분하여 다른 레이아웃 효과를 준다.
-            if self.practiceController.collections[sectionIndex].description == "Recents" {
-                
+//            if self.practiceController.collections[sectionIndex].description == "Recents" {
+            if self.practiceController.collections2[sectionIndex].description == "Recents" {
                 /*
                  itemSize를 최대치로 설정
                  CollectionView에서 Item의 너비와 높이 설정
@@ -95,7 +101,6 @@ extension PracticeViewController {
                 // 각 섹션의 컨텐츠 내 공백 설정
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
                 
-                
                 //섹션 타이틀 크기 설정
                 let titleSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
 
@@ -108,8 +113,8 @@ extension PracticeViewController {
                 //섹션에 위에서 설정한 타이틀을 추가
                 section.boundarySupplementaryItems = [titleSupplementary]
                 
-            } else if self.practiceController.collections[sectionIndex].description == "List"{
-                
+//            } else if self.practiceController.collections[sectionIndex].description == "List"{
+            } else if self.practiceController.collections2[sectionIndex].description == "List"{
                 let leadingItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
                                                             widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3)))
                 leadingItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
@@ -197,21 +202,57 @@ extension PracticeViewController {
         
     }
     
-    func createFirstCellRegistration() -> UICollectionView.CellRegistration<PracticeCell, PracticeSupport.StoreList>{
-        return UICollectionView.CellRegistration<PracticeCell, PracticeSupport.StoreList> { (cell, indexPath, storeList) in
+//    func createFirstCellRegistration() -> UICollectionView.CellRegistration<PracticeCell, PracticeSupport.StoreList>{
+//        return UICollectionView.CellRegistration<PracticeCell, PracticeSupport.StoreList> { (cell, indexPath, storeList) in
+//            // Populate the cell with our item description.
+//            //타이틀과 카테고리를 받아와서 적용시킨다.
+//            cell.titleLabel.text = storeList.title
+//            cell.categoryLabel.text = storeList.category
+//        }
+//    }
+//
+//    func createSecondCellRegistration()-> UICollectionView.CellRegistration<PracticeCell2, PracticeSupport.StoreList>{
+//        return UICollectionView.CellRegistration<PracticeCell2, PracticeSupport.StoreList> { (cell, indexPath, storeList) in
+//            // Populate the cell with our item description.
+//            //타이틀과 카테고리를 받아와서 적용시킨다.
+//            cell.titleLabel.text = storeList.title
+//            cell.categoryLabel.text = storeList.category
+//        }
+//    }
+    func createFirstCellRegistration() -> UICollectionView.CellRegistration<PracticeCell, PracticeSupport.StoreList2>{
+        return UICollectionView.CellRegistration<PracticeCell, PracticeSupport.StoreList2> { (cell, indexPath, storeList) in
             // Populate the cell with our item description.
             //타이틀과 카테고리를 받아와서 적용시킨다.
             cell.titleLabel.text = storeList.title
             cell.categoryLabel.text = storeList.category
+
+            let url = URL(string: storeList.url)
+            do{
+                let data = try Data(contentsOf: url!)
+                let urlImage = UIImage(data: data)
+                cell.imageView.image = urlImage
+                
+            }catch{
+                print("Error!! SHIT")
+            }
+            
         }
     }
     
-    func createSecondCellRegistration()-> UICollectionView.CellRegistration<PracticeCell2, PracticeSupport.StoreList>{
-        return UICollectionView.CellRegistration<PracticeCell2, PracticeSupport.StoreList> { (cell, indexPath, storeList) in
+    func createSecondCellRegistration()-> UICollectionView.CellRegistration<PracticeCell3, PracticeSupport.StoreList2>{
+        return UICollectionView.CellRegistration<PracticeCell3, PracticeSupport.StoreList2> { (cell, indexPath, storeList) in
             // Populate the cell with our item description.
             //타이틀과 카테고리를 받아와서 적용시킨다.
             cell.titleLabel.text = storeList.title
             cell.categoryLabel.text = storeList.category
+
+            let url = URL(string: storeList.url)
+            do{
+                let data = try Data(contentsOf: url!)
+                cell.imageView.image = UIImage(data: data)
+            }catch{
+                print("Error!! SHIT")
+            }
         }
     }
     
@@ -226,21 +267,39 @@ extension PracticeViewController {
         
         //UICollectionViewDiffableDatasource를 인스턴스화 히고 Section과 항목 유형을 매개 변수화 한다. _ 작업하려는 CollectionView에 대한 포인터를 전달
         dataSource = UICollectionViewDiffableDataSource
-        <PracticeSupport.ListCollection, PracticeSupport.StoreList>(collectionView: collectionView) {
+        <PracticeSupport.ListCollection2, PracticeSupport.StoreList2>(collectionView: collectionView) {
             //DiffabelDataSource가 행당 포인터를 통해 CollectionView의 DataSource로 연결
-            (collectionView: UICollectionView, indexPath: IndexPath, storeList: PracticeSupport.StoreList) -> UICollectionViewCell? in
+            (collectionView: UICollectionView, indexPath: IndexPath, storeList2: PracticeSupport.StoreList2) -> UICollectionViewCell? in
             // Return the cell.
 
-            let section = self.practiceController.collections[indexPath.section]
+//            let section = self.practiceController.collections[indexPath.section]
+            let section = self.practiceController.collections2[indexPath.section]
             switch section.description {
             case "Recents":
-                return collectionView.dequeueConfiguredReusableCell(using: firstCellRegistration, for: indexPath, item: storeList)
+                return collectionView.dequeueConfiguredReusableCell(using: firstCellRegistration, for: indexPath, item: storeList2)
             case "List":
-                return collectionView.dequeueConfiguredReusableCell(using: SecondCellRegistration, for: indexPath, item: storeList)
+                return collectionView.dequeueConfiguredReusableCell(using: SecondCellRegistration, for: indexPath, item: storeList2)
             default:
                 fatalError("Can't Represent")
             }
         }
+//        dataSource = UICollectionViewDiffableDataSource
+//        <PracticeSupport.ListCollection, PracticeSupport.StoreList>(collectionView: collectionView) {
+//            //DiffabelDataSource가 행당 포인터를 통해 CollectionView의 DataSource로 연결
+//            (collectionView: UICollectionView, indexPath: IndexPath, storeList: PracticeSupport.StoreList) -> UICollectionViewCell? in
+//            // Return the cell.
+//
+////            let section = self.practiceController.collections[indexPath.section]
+//            let section = self.practiceController.collections2[indexPath.section]
+//            switch section.description {
+//            case "Recents":
+//                return collectionView.dequeueConfiguredReusableCell(using: firstCellRegistration, for: indexPath, item: storeList)
+//            case "List":
+//                return collectionView.dequeueConfiguredReusableCell(using: SecondCellRegistration, for: indexPath, item: storeList)
+//            default:
+//                fatalError("Can't Represent")
+//            }
+//        }
     }
     
     
@@ -263,10 +322,18 @@ extension PracticeViewController {
         }
         // --> Title설정
         
-        //snapshot을 이용하여, 업데이트 주기에 표시 할 항목에 대한 설명으로 해당 스냅샷을 채움
-        currentSnapshot = NSDiffableDataSourceSnapshot
-            <PracticeSupport.ListCollection, PracticeSupport.StoreList>()
-        practiceController.collections.forEach {
+//        //snapshot을 이용하여, 업데이트 주기에 표시 할 항목에 대한 설명으로 해당 스냅샷을 채움
+//        currentSnapshot = NSDiffableDataSourceSnapshot
+//            <PracticeSupport.ListCollection, PracticeSupport.StoreList>()
+//        practiceController.collections.forEach {
+//            let collection = $0
+//            //표시할 섹션의 주입
+//            currentSnapshot.appendSections([collection])
+//            //다음으로 옵데이트에 표시할 항목의 식벼ㅛㄹ자를 추가, 식별자의 배열을 전달
+//            currentSnapshot.appendItems(collection.list)
+//        }
+        currentSnapshot = NSDiffableDataSourceSnapshot<PracticeSupport.ListCollection2, PracticeSupport.StoreList2>()
+        practiceController.collections2.forEach {
             let collection = $0
             //표시할 섹션의 주입
             currentSnapshot.appendSections([collection])

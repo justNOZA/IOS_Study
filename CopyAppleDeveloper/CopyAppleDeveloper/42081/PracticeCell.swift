@@ -29,41 +29,37 @@ class PracticeCell: UICollectionViewCell {
 
 extension PracticeCell {
     func configure() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(categoryLabel)
+//        imageView.bounds.size = CGSize(width: frame.width * 0, height: frame.height * 0)
 
         titleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         titleLabel.adjustsFontForContentSizeCategory = true
         categoryLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
         categoryLabel.adjustsFontForContentSizeCategory = true
-        categoryLabel.textColor = .placeholderText
-
+        categoryLabel.textColor = .systemGray2
+        
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 4
         imageView.backgroundColor = UIColor.systemPurple
-//        imageView.frame = CGRect(x: 0.0, y: 0.0, width: frame.size.width / 4, height: frame.size.height)
-       
-        let spacing = CGFloat(10)
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: spacing),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-
-            categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
-            ])
         
+        
+        print(imageView.frame = CGRect(x: 0, y: frame.height * 0.15, width: frame.width, height: frame.height * 0.7))
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
+//            imageView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor),
+//            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+//            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+//            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 20)
+        ])
         
     }
 }

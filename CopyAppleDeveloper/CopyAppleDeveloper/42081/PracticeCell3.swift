@@ -7,7 +7,7 @@ Cell for displaying a video
 
 import UIKit
 
-class PracticeCell2: UICollectionViewCell {
+class PracticeCell3: UICollectionViewCell {
 
     static let reuseIdentifier = "practice-cell-reuse-identifier"
     let imageView = UIImageView()
@@ -27,15 +27,17 @@ class PracticeCell2: UICollectionViewCell {
     }
 }
 
-extension PracticeCell2 {
+extension PracticeCell3 {
     func configure() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(categoryLabel)
-
+        imageView.frame.size = CGSize(width: frame.height, height: frame.height * 0.8)
+        
         titleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         titleLabel.adjustsFontForContentSizeCategory = true
         categoryLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
@@ -47,20 +49,19 @@ extension PracticeCell2 {
         imageView.layer.cornerRadius = 4
         imageView.backgroundColor = UIColor.systemPurple
        
-        let spacing = CGFloat(10)
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-
+//            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+//            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+//            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: spacing),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
+//            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
 
             categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            categoryLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: spacing),
+            categoryLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
             categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            categoryLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+//            categoryLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
             ])
     }
 }
