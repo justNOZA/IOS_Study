@@ -48,14 +48,14 @@ extension PracticeCell {
         imageView.layer.cornerRadius = 4
         imageView.backgroundColor = UIColor.systemPurple
         
+        imageView.frame = CGRect(x: 0, y: frame.height * 0.3, width: frame.width, height: frame.height * 0.7)
         
-        print(imageView.frame = CGRect(x: 0, y: frame.height * 0.15, width: frame.width, height: frame.height * 0.7))
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
-//            imageView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
+//            imageView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor)
 //            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 //            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
 //            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 20)

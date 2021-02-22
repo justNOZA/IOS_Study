@@ -42,12 +42,20 @@ class ViewController: UIViewController {
         let check = UIAlertController(title: checkTitle, message: checkMessage, preferredStyle: UIAlertController.Style.alert)
         let confirmAction = UIAlertAction(title: "YES", style: .default){
             _ in
-            let url = URL(string:self.imgUrl)
-            do{
-                let data = try Data(contentsOf: url!)
-                self.ImageView.image = UIImage(data: data)
-            }catch{
-                print("I'm Sorry")
+//            let url = URL(string:self.imgUrl)
+//            do{
+//                let data = try Data(contentsOf: url!)
+//                self.ImageView.image = UIImage(data: data)
+//            }catch{
+//                print("I'm Sorry")
+//            }
+            var request = URLRequest(url:URL(string:"https://itunes.apple.com/search?term=twitter&media=software&entity=software&country=jp&lang=ja_jp&limit=1")!)
+            print("a")
+            request.httpMethod = "GET"
+            URLSession.shared.dataTask(with: request) {(data, response, error) in
+//                guard let data = data else {return}
+                print(error)
+                print(response)
             }
         }
         let rejectAction = UIAlertAction(title: "Cancle", style:.cancel)
