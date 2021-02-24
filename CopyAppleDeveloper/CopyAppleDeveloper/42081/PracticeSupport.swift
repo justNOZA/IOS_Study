@@ -69,17 +69,17 @@ extension PracticeSupport {
             var collection : ListCollection2 = ListCollection2(title: "", list: [], description: "")
             
             for A in practices {
-                collection.title = (A["title"] as? String)!
-                collection.description = (A["description"] as? String)!
+                collection.title = A["title"] as! String
+                collection.description = A["description"] as! String
                 guard let lists = A["list"] as? [[String:Any]] else {
                     return
                 }
                 var listItem : [StoreList2] = []
                 for B in lists {
                     var item : StoreList2 = StoreList2(title: "", category: "", url: "")
-                    item.title = (B["title"] as? String)!
-                    item.category = (B["category"] as? String)!
-                    item.url = (B["url"] as? String)!
+                    item.title = B["title"] as! String
+                    item.category = B["category"] as! String
+                    item.url = B["url"] as! String
                     listItem.append(item)
                 }
                 collection.list = listItem

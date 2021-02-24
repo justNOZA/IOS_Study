@@ -32,6 +32,7 @@ extension PracticeCell {
         imageView.translatesAutoresizingMaskIntoConstraints = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
+        categoryLabel.numberOfLines = 2
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(categoryLabel)
