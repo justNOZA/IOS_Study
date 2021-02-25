@@ -49,18 +49,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "NewsAPI"
+        self.navigationItem.backButtonTitle = "Back"
         // Do any additional setup after loading the view.
         tableViewMain.delegate = self
         //tableViewMain 테이블 뷰의 경우 ViewController내부에서 찾아서 받으라는 명령어
         tableViewMain.dataSource = self
         news = gUrl.getNews()
     }
-    
+
+    //1.
     //table View
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        indexPath.row
-        
+        let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
+        let newsDetail = storyboard.instantiateViewController(identifier: "newsDetail") as! NewsDetailController
+        if let data = news {
+            if let v = data[indexPath.row] as? [String:Any] {
+                if let url = v["urlToImage"] as? String{
+                    newsDetail.imageUrl = url
+                }
+                if let desc = v["description"] as? String{
+                    newsDetail.descriptionNews = desc
+                }
+             }
+        }
+
+        showDetailViewController(newsDetail, sender: nil)
+
     }
+
+    //2.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier, "naviSegue" == id {
+            if let controller = segue.destination as? NewsDetailController {
+                if let data = news {
+                    if let indexpath = tableViewMain.indexPathForSelectedRow {
+                        if let v = data[indexpath.row] as? [String:Any] {
+                            if let url = v["urlToImage"] as? String{
+                                controller.imageUrl = url
+                            }
+                            if let desc = v["description"] as? String{
+                                controller.descriptionNews = desc
+                            }
+                        }
+                        controller.navigationItem.title = "\(indexpath.row)"
+                    }
+                }
+            }
+        }
+     }
+        //자동
+    
 
     /*
      HTTP 통신 : 네트워크 프로토콜 / URLSession

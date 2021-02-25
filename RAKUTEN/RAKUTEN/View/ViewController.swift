@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    lazy var active = ActivityIndicator()
+    lazy var active = ActivityIndicator(self)
     
     var libraryPretender = LibraryPretender()
     
@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //ActivityIndicator적용
-        active.indicator.center = self.view.center
         self.view.addSubview(active.indicator)
 
         

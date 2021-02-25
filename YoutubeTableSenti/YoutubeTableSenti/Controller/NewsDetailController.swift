@@ -23,7 +23,6 @@ class NewsDetailController: UIViewController {
                     self.imageMain.image = UIImage(data: data)
                 }
             }
-
         }
         if let desc = descriptionNews{
             self.labelMain.text = desc
