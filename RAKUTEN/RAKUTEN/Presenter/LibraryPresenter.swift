@@ -9,6 +9,7 @@ import Foundation
 
 class LibraryPresenter {
     
+    //잘되고 있는 것인가 슈ㅜ발
     private var librarayService : ListArrayService
     private weak var libView : LibView?
     
@@ -22,6 +23,7 @@ class LibraryPresenter {
         libView?.startLoading()
         librarayService.downloadData { [weak self] list in
             DispatchQueue.main.async {
+                //Dispath를 쓰지 않으면, 멈추지 않는다.
                 self?.libView?.finishLoading()
             }
             
