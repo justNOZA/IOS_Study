@@ -15,10 +15,14 @@
 		9696CDA625E611410036C2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9696CDA525E611410036C2B6 /* Assets.xcassets */; };
 		9696CDA925E611410036C2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9696CDA725E611410036C2B6 /* LaunchScreen.storyboard */; };
 		9696CDBA25E619560036C2B6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDB925E619560036C2B6 /* ActivityIndicator.swift */; };
-		9696CDC125E61EBB0036C2B6 /* LibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDC025E61EBB0036C2B6 /* LibTableViewCell.swift */; };
-		9696CDC425E6215C0036C2B6 /* LibArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDC325E6215C0036C2B6 /* LibArray.swift */; };
-		9696CDC725E621720036C2B6 /* LibraryPretender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDC625E621720036C2B6 /* LibraryPretender.swift */; };
+		9696CDC425E6215C0036C2B6 /* LibViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDC325E6215C0036C2B6 /* LibViewData.swift */; };
+		9696CDC725E621720036C2B6 /* LibraryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDC625E621720036C2B6 /* LibraryPresenter.swift */; };
 		9696CDCE25E641660036C2B6 /* LibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CDCD25E641660036C2B6 /* LibraryService.swift */; };
+		9696CE1625E76D030036C2B6 /* LibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CE1525E76D030036C2B6 /* LibView.swift */; };
+		9696CE1A25E773E80036C2B6 /* RakutenLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CE1925E773E80036C2B6 /* RakutenLibrary.swift */; };
+		9696CE1E25E7776E0036C2B6 /* ListArrayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696CE1D25E7776E0036C2B6 /* ListArrayService.swift */; };
+		9696FE4E25E79C4E0014F143 /* ListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696FE4D25E79C4E0014F143 /* ListTableCell.swift */; };
+		9696FE5125E87CA60014F143 /* LibDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696FE5025E87CA60014F143 /* LibDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +36,14 @@
 		9696CDA825E611410036C2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9696CDAA25E611410036C2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9696CDB925E619560036C2B6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		9696CDC025E61EBB0036C2B6 /* LibTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibTableViewCell.swift; sourceTree = "<group>"; };
-		9696CDC325E6215C0036C2B6 /* LibArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibArray.swift; sourceTree = "<group>"; };
-		9696CDC625E621720036C2B6 /* LibraryPretender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPretender.swift; sourceTree = "<group>"; };
+		9696CDC325E6215C0036C2B6 /* LibViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibViewData.swift; sourceTree = "<group>"; };
+		9696CDC625E621720036C2B6 /* LibraryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenter.swift; sourceTree = "<group>"; };
 		9696CDCD25E641660036C2B6 /* LibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryService.swift; sourceTree = "<group>"; };
+		9696CE1525E76D030036C2B6 /* LibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibView.swift; sourceTree = "<group>"; };
+		9696CE1925E773E80036C2B6 /* RakutenLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakutenLibrary.swift; sourceTree = "<group>"; };
+		9696CE1D25E7776E0036C2B6 /* ListArrayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArrayService.swift; sourceTree = "<group>"; };
+		9696FE4D25E79C4E0014F143 /* ListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableCell.swift; sourceTree = "<group>"; };
+		9696FE5025E87CA60014F143 /* LibDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				9696CDB325E612B90036C2B6 /* Presenter */,
 				9696CDB225E612B10036C2B6 /* Model */,
 				9696CDAA25E611410036C2B6 /* Info.plist */,
+				9696CDCD25E641660036C2B6 /* LibraryService.swift */,
 				9696CDB625E612DC0036C2B6 /* SupportFiles */,
 				9696CDA225E611410036C2B6 /* RAKUTEN.xcdatamodeld */,
 			);
@@ -81,8 +90,8 @@
 		9696CDB225E612B10036C2B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9696CDC325E6215C0036C2B6 /* LibArray.swift */,
-				9696CDCD25E641660036C2B6 /* LibraryService.swift */,
+				9696CE1925E773E80036C2B6 /* RakutenLibrary.swift */,
+				9696CE1D25E7776E0036C2B6 /* ListArrayService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,7 +99,7 @@
 		9696CDB325E612B90036C2B6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				9696CDC625E621720036C2B6 /* LibraryPretender.swift */,
+				9696CDC625E621720036C2B6 /* LibraryPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -101,7 +110,10 @@
 				9696CD9D25E611410036C2B6 /* ViewController.swift */,
 				9696CD9F25E611410036C2B6 /* Main.storyboard */,
 				9696CDB925E619560036C2B6 /* ActivityIndicator.swift */,
-				9696CDC025E61EBB0036C2B6 /* LibTableViewCell.swift */,
+				9696CE1525E76D030036C2B6 /* LibView.swift */,
+				9696CDC325E6215C0036C2B6 /* LibViewData.swift */,
+				9696FE4D25E79C4E0014F143 /* ListTableCell.swift */,
+				9696FE5025E87CA60014F143 /* LibDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,13 +200,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9696CD9E25E611410036C2B6 /* ViewController.swift in Sources */,
-				9696CDC425E6215C0036C2B6 /* LibArray.swift in Sources */,
-				9696CDC125E61EBB0036C2B6 /* LibTableViewCell.swift in Sources */,
+				9696CE1E25E7776E0036C2B6 /* ListArrayService.swift in Sources */,
+				9696CDC425E6215C0036C2B6 /* LibViewData.swift in Sources */,
 				9696CDCE25E641660036C2B6 /* LibraryService.swift in Sources */,
-				9696CDC725E621720036C2B6 /* LibraryPretender.swift in Sources */,
+				9696CDC725E621720036C2B6 /* LibraryPresenter.swift in Sources */,
 				9696CDBA25E619560036C2B6 /* ActivityIndicator.swift in Sources */,
+				9696CE1A25E773E80036C2B6 /* RakutenLibrary.swift in Sources */,
+				9696CE1625E76D030036C2B6 /* LibView.swift in Sources */,
+				9696FE5125E87CA60014F143 /* LibDetailView.swift in Sources */,
 				9696CD9A25E611410036C2B6 /* AppDelegate.swift in Sources */,
 				9696CDA425E611410036C2B6 /* RAKUTEN.xcdatamodeld in Sources */,
+				9696FE4E25E79C4E0014F143 /* ListTableCell.swift in Sources */,
 				9696CD9C25E611410036C2B6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
