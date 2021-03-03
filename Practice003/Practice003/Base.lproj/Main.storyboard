@@ -23,9 +23,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Button"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ChgBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xtc-PM-nIv"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teJ-SK-VYl">
                                 <rect key="frame" x="174" y="144" width="66" height="21"/>
@@ -48,7 +45,6 @@
                     </view>
                     <connections>
                         <outlet property="ChgBtn" destination="7Io-08-B1f" id="BSo-ep-QIz"/>
-                        <outlet property="ChgBtnO" destination="7Io-08-B1f" id="qzg-Gl-LmH"/>
                         <outlet property="LocalL" destination="teJ-SK-VYl" id="I7h-NE-Ufy"/>
                     </connections>
                 </viewController>
