@@ -7,8 +7,9 @@
 
 import UIKit
 import VisionKit
+import Photos
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,15 @@ class ViewController: UIViewController {
         scanDocument()
     }
     @IBOutlet weak var textIn: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
+    @IBAction func normalCameraMode(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        // UIImagePickerController カメラを起動する
+        present(picker, animated: true, completion: nil)
+    }
     private func scanDocument() {
         let scanVC = VNDocumentCameraViewController()
         scanVC.delegate = self
@@ -37,7 +46,7 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
             controller.dismiss(animated: true)
             return
         }
-        
+        imageView.image = scan.imageOfPage(at: 0)
         textIn.text = move.ocrRequest(imageInput: scan.imageOfPage(at: 0))
         // Here will be the code for text recognition
  
@@ -51,5 +60,22 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
     
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
         controller.dismiss(animated: true)
+    }
+}
+
+//一般のカメラではできない
+extension ViewController:UIImagePickerControllerDelegate{
+    
+    
+    /// シャッターボタンを押下した際、確認メニューに切り替わる
+    /// - Parameters:
+    ///   - picker: ピッカー
+    ///   - info: 写真情報
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        imageView.image = image
+        textIn.text = move.ocrRequest(imageInput: image)
+        // UIImagePickerController カメラが閉じる
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -44,7 +44,7 @@ class OCRReading{
     private func getTestUIImage() -> UIImage? {
         guard let url = Bundle(for: type(of: self)).url(forResource: "engImg", withExtension: "png") else { return nil }
         guard let tdata = try? Data(contentsOf: url) else { return nil }
-        let tImage = UIImage(data: tdata)
+        let tImage = UIImage(data: tdata)   
         
         return tImage
     }
@@ -58,7 +58,7 @@ class OCRReading{
             
             return topCandidate.string.trimmingCharacters(in: .whitespaces)
         }
-        
+        print(recognizedStrings)
         return recognizedStrings.joined(separator: "\n")
     }
 }
