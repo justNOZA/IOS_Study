@@ -11,28 +11,30 @@ import Photos
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
 
+    var ocr = OCRReading()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    var move = OCRReading()
+    
     @IBAction func show(_ sender: Any) {
-        textIn.text = move.ocrRequest()
+//        textIn.text = ocr.ocrRequest()
     }
     
     @IBAction func cameraReading(_ sender: Any) {
         scanDocument()
     }
     @IBOutlet weak var textIn: UILabel!
+    @IBOutlet weak var allText: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBAction func normalCameraMode(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.delegate = self
-        // UIImagePickerController カメラを起動する
-        present(picker, animated: true, completion: nil)
-    }
+//    @IBAction func normalCameraMode(_ sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.sourceType = .camera
+//        picker.delegate = self
+//        // UIImagePickerController カメラを起動する
+//        present(picker, animated: true, completion: nil)
+//    }
     private func scanDocument() {
         let scanVC = VNDocumentCameraViewController()
         scanVC.delegate = self
@@ -47,7 +49,7 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
             return
         }
         imageView.image = scan.imageOfPage(at: 0)
-        textIn.text = move.ocrRequest(imageInput: scan.imageOfPage(at: 0))
+        (textIn.text, allText.text) = ocr.ocrRequest(imageInput: scan.imageOfPage(at: 0))
         // Here will be the code for text recognition
  
         controller.dismiss(animated: true)
@@ -74,7 +76,7 @@ extension ViewController:UIImagePickerControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         imageView.image = image
-        textIn.text = move.ocrRequest(imageInput: image)
+        (textIn.text, allText.text) = ocr.ocrRequest(imageInput: image)
         // UIImagePickerController カメラが閉じる
         self.dismiss(animated: true, completion: nil)
     }
