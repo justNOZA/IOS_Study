@@ -23,6 +23,9 @@ class ViewController: UIViewController/*, UINavigationControllerDelegate*/ {
     @IBOutlet weak var allText: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBAction func img(_ sender: Any) {
+        allText.text = ocr.ocrReading()
+    }
     func addAction(){
 //        let imagePicker = UIImagePickerController()
 //        imagePicker.delegate = self

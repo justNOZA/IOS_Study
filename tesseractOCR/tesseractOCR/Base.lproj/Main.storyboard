@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16A-Lq-DjG">
-                                <rect key="frame" x="20" y="5" width="770" height="30"/>
+                                <rect key="frame" x="736" y="5" width="54" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XWQ-5d-xdW"/>
                                 </constraints>
@@ -63,6 +63,14 @@
                                     <constraint firstAttribute="bottom" secondItem="WaU-TI-ln6" secondAttribute="bottom" id="x5k-8D-ACI"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pN-gr-7lW">
+                                <rect key="frame" x="20" y="5" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="img:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OeR-TB-3ib"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aox-1i-gOI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,7 +78,6 @@
                             <constraint firstItem="aox-1i-gOI" firstAttribute="trailing" secondItem="16A-Lq-DjG" secondAttribute="trailing" constant="20" id="5io-fe-ifc"/>
                             <constraint firstItem="awr-bW-aLk" firstAttribute="top" secondItem="16A-Lq-DjG" secondAttribute="bottom" constant="5" id="9dj-7q-4UX"/>
                             <constraint firstItem="awr-bW-aLk" firstAttribute="leading" secondItem="aox-1i-gOI" secondAttribute="leading" constant="20" id="EfD-aH-X69"/>
-                            <constraint firstItem="16A-Lq-DjG" firstAttribute="leading" secondItem="aox-1i-gOI" secondAttribute="leading" constant="20" id="Yeu-SS-HB9"/>
                             <constraint firstItem="16A-Lq-DjG" firstAttribute="top" secondItem="aox-1i-gOI" secondAttribute="top" constant="5" id="b00-3p-M0Z"/>
                             <constraint firstItem="aox-1i-gOI" firstAttribute="trailing" secondItem="awr-bW-aLk" secondAttribute="trailing" constant="20" id="oda-iz-gtx"/>
                             <constraint firstItem="aox-1i-gOI" firstAttribute="bottom" secondItem="awr-bW-aLk" secondAttribute="bottom" constant="5" id="qvN-eH-KJa"/>
