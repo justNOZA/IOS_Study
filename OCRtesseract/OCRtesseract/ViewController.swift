@@ -38,6 +38,7 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
         }
         imageView.image = scan.imageOfPage(at: 0)
         textIn.text = ocr.ocrActing(scan.imageOfPage(at: 0))
+        allText.text = ocr.ocrReading()
         // Here will be the code for text recognition
  
         controller.dismiss(animated: true)

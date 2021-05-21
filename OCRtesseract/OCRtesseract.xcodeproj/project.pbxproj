@@ -20,6 +20,8 @@
 		966A2F4C265785E400911C5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966A2F4B265785E400911C5B /* Main.storyboard */; };
 		966A2F4E2657860E00911C5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A2F4D2657860E00911C5B /* ViewController.swift */; };
 		966A2F502657874C00911C5B /* OCRaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A2F4F2657874C00911C5B /* OCRaction.swift */; };
+		96968B52265791BA007FBE6F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 96968B51265791BA007FBE6F /* tessdata */; };
+		96968B54265793E0007FBE6F /* engImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96968B53265793E0007FBE6F /* engImg.png */; };
 		A0F691A44D3B6E53AB4C75DB /* Pods_OCRtesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706F2234C9D359FF1670ED2 /* Pods_OCRtesseract.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		966A2F4B265785E400911C5B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		966A2F4D2657860E00911C5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		966A2F4F2657874C00911C5B /* OCRaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRaction.swift; sourceTree = "<group>"; };
+		96968B51265791BA007FBE6F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		96968B53265793E0007FBE6F /* engImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = engImg.png; path = ../../OCRTest/OCRTest/engImg.png; sourceTree = "<group>"; };
 		A5EC0E2A170EC6EFE7698125 /* Pods-OCRtesseract-OCRtesseractUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRtesseract-OCRtesseractUITests.debug.xcconfig"; path = "Target Support Files/Pods-OCRtesseract-OCRtesseractUITests/Pods-OCRtesseract-OCRtesseractUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8EBA3F0AB66ECD8BC657175 /* Pods-OCRtesseractTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRtesseractTests.debug.xcconfig"; path = "Target Support Files/Pods-OCRtesseractTests/Pods-OCRtesseractTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE96796214E7BFFA65BC4721 /* Pods_OCRtesseract_OCRtesseractUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRtesseract_OCRtesseractUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +126,8 @@
 		966A2F0F2657834E00911C5B /* OCRtesseract */ = {
 			isa = PBXGroup;
 			children = (
+				96968B53265793E0007FBE6F /* engImg.png */,
+				96968B51265791BA007FBE6F /* tessdata */,
 				966A2F102657834E00911C5B /* AppDelegate.swift */,
 				966A2F122657834E00911C5B /* SceneDelegate.swift */,
 				966A2F1C2657834F00911C5B /* Assets.xcassets */,
@@ -289,6 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				966A2F202657834F00911C5B /* LaunchScreen.storyboard in Resources */,
+				96968B54265793E0007FBE6F /* engImg.png in Resources */,
+				96968B52265791BA007FBE6F /* tessdata in Resources */,
 				966A2F1D2657834F00911C5B /* Assets.xcassets in Resources */,
 				966A2F4C265785E400911C5B /* Main.storyboard in Resources */,
 			);
@@ -560,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JUMUU537CP;
+				DEVELOPMENT_TEAM = 7K3AB8ZPPR;
 				INFOPLIST_FILE = OCRtesseract/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JUMUU537CP;
+				DEVELOPMENT_TEAM = 7K3AB8ZPPR;
 				INFOPLIST_FILE = OCRtesseract/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (

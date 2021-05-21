@@ -17,17 +17,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func show(_ sender: Any) {
-//        textIn.text = ocr.ocrRequest()
-    }
-    
     @IBAction func cameraReading(_ sender: Any) {
         scanDocument()
     }
-    @IBOutlet weak var textIn: UILabel!
-    @IBOutlet weak var allText: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    
+  
+    @IBOutlet weak var textView: UIView!
+    @IBOutlet weak var imageViewCollection: UIView!
 //    @IBAction func normalCameraMode(_ sender: Any) {
 //        let picker = UIImagePickerController()
 //        picker.sourceType = .camera
@@ -35,6 +30,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 //        // UIImagePickerController カメラを起動する
 //        present(picker, animated: true, completion: nil)
 //    }
+
     private func scanDocument() {
         let scanVC = VNDocumentCameraViewController()
         scanVC.delegate = self
@@ -48,11 +44,44 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
             controller.dismiss(animated: true)
             return
         }
-        imageView.image = scan.imageOfPage(at: 0)
-        (textIn.text, allText.text) = ocr.ocrRequest(imageInput: scan.imageOfPage(at: 0))
         // Here will be the code for text recognition
- 
         controller.dismiss(animated: true)
+        let wide = imageViewCollection.frame.width/CGFloat(scan.pageCount)
+        for i in 0..<scan.pageCount{
+            let img = UIImageView()
+            let value = UITextView()
+            value.textContainer.maximumNumberOfLines = 100
+            value.font = UIFont(name: "Callout", size: 12)
+            
+            img.image = scan.imageOfPage(at: i)
+            imageViewCollection.addSubview(img)
+            plusContraint(img, CGFloat(i), wide)
+            
+            
+            value.text = ocr.ocrRequest(imageInput: img.image!)
+            textView.addSubview(value)
+            plusContraint(value, CGFloat(i), wide)
+            
+        }
+    }
+    
+    func plusContraint(_ view: UIImageView, _ num : CGFloat, _ wide : CGFloat){
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: view.superview!.topAnchor, constant: 0),
+            view.bottomAnchor.constraint(equalTo: view.superview!.bottomAnchor, constant: 0),
+            view.widthAnchor.constraint(equalToConstant: wide),
+            view.leadingAnchor.constraint(equalTo: view.superview!.leadingAnchor, constant: wide*num)
+        ])
+    }
+    func plusContraint(_ view: UITextView, _ num : CGFloat, _ wide : CGFloat){
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: view.superview!.topAnchor, constant: 0),
+            view.bottomAnchor.constraint(equalTo: view.superview!.bottomAnchor, constant: 0),
+            view.widthAnchor.constraint(equalToConstant: wide),
+            view.leadingAnchor.constraint(equalTo: view.superview!.leadingAnchor, constant: wide*num),
+        ])
     }
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
@@ -64,20 +93,18 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
         controller.dismiss(animated: true)
     }
 }
-
-//一般のカメラではできない
-extension ViewController:UIImagePickerControllerDelegate{
-    
-    
-    /// シャッターボタンを押下した際、確認メニューに切り替わる
-    /// - Parameters:
-    ///   - picker: ピッカー
-    ///   - info: 写真情報
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.originalImage] as! UIImage
-        imageView.image = image
-        (textIn.text, allText.text) = ocr.ocrRequest(imageInput: image)
-        // UIImagePickerController カメラが閉じる
-        self.dismiss(animated: true, completion: nil)
-    }
-}
+//
+////一般のカメラではできない
+//extension ViewController:UIImagePickerControllerDelegate{
+//
+//
+//    /// シャッターボタンを押下した際、確認メニューに切り替わる
+//    /// - Parameters:
+//    ///   - picker: ピッカー
+//    ///   - info: 写真情報
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let image = info[.originalImage] as! UIImage
+//        // UIImagePickerController カメラが閉じる
+//        self.dismiss(animated: true, completion: nil)
+//    }
+//}
