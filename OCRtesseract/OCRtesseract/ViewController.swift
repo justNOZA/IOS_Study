@@ -10,6 +10,7 @@ import VisionKit
 import Photos
 
 class ViewController: UIViewController/*, UINavigationControllerDelegate*/ {
+    let ocr = OCRaction()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

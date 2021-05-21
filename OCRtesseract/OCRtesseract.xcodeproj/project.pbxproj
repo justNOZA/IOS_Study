@@ -19,6 +19,7 @@
 		966A2F452657850000911C5B /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = 966A2F442657850000911C5B /* SwiftyTesseract */; };
 		966A2F4C265785E400911C5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966A2F4B265785E400911C5B /* Main.storyboard */; };
 		966A2F4E2657860E00911C5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A2F4D2657860E00911C5B /* ViewController.swift */; };
+		966A2F502657874C00911C5B /* OCRaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A2F4F2657874C00911C5B /* OCRaction.swift */; };
 		A0F691A44D3B6E53AB4C75DB /* Pods_OCRtesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706F2234C9D359FF1670ED2 /* Pods_OCRtesseract.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		966A2F372657834F00911C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966A2F4B265785E400911C5B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		966A2F4D2657860E00911C5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		966A2F4F2657874C00911C5B /* OCRaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRaction.swift; sourceTree = "<group>"; };
 		A5EC0E2A170EC6EFE7698125 /* Pods-OCRtesseract-OCRtesseractUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRtesseract-OCRtesseractUITests.debug.xcconfig"; path = "Target Support Files/Pods-OCRtesseract-OCRtesseractUITests/Pods-OCRtesseract-OCRtesseractUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8EBA3F0AB66ECD8BC657175 /* Pods-OCRtesseractTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRtesseractTests.debug.xcconfig"; path = "Target Support Files/Pods-OCRtesseractTests/Pods-OCRtesseractTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE96796214E7BFFA65BC4721 /* Pods_OCRtesseract_OCRtesseractUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRtesseract_OCRtesseractUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				966A2F192657834E00911C5B /* OCRtesseract.xcdatamodeld */,
 				966A2F4B265785E400911C5B /* Main.storyboard */,
 				966A2F4D2657860E00911C5B /* ViewController.swift */,
+				966A2F4F2657874C00911C5B /* OCRaction.swift */,
 			);
 			path = OCRtesseract;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			files = (
 				966A2F4E2657860E00911C5B /* ViewController.swift in Sources */,
 				966A2F112657834E00911C5B /* AppDelegate.swift in Sources */,
+				966A2F502657874C00911C5B /* OCRaction.swift in Sources */,
 				966A2F132657834E00911C5B /* SceneDelegate.swift in Sources */,
 				966A2F1B2657834E00911C5B /* OCRtesseract.xcdatamodeld in Sources */,
 			);
