@@ -13,20 +13,24 @@ class OCRaction {
     
     func ocrActing(_ image: UIImage) -> String{
         var resultText = "over"
-        print("---------------------------------------normal------------------------")
-        let result = tesseract.performOCR(on: image)
+
+        let block = tesseract.recognizedBlocks(from: image, for: .block)
+        print("---------------------------------------ocrRB BLOCK------------------------")
         do {
-            let value = try result.get()
-//            print("\(value)")
-            resultText = value
+            let (value, value2) = try block.get()
+            print("-----------string")
+            print("\(value)")
+            print("-----------Recognizedblock")
+            print("\(value2)")
         } catch {
             print("Error retrieving the value: \(error)")
         }
-        let block = tesseract.recognizedBlocks(from: image, for: .block)
-    
-//        print("---------------------------------------ocrRB------------------------")
+        
+//        //space.. 
+//        let word = tesseract.recognizedBlocks(from: image, for: .word)
+//        print("---------------------------------------ocrRB WORD------------------------")
 //        do {
-//            let (value, value2) = try block.get()
+//            let (value, value2) = try word.get()
 //            print("-----------string")
 //            print("\(value)")
 //            print("-----------Recognizedblock")
@@ -34,27 +38,65 @@ class OCRaction {
 //        } catch {
 //            print("Error retrieving the value: \(error)")
 //        }
-//
-        return resultText
-    }
-    func ocrReading() -> String?{
-        var resultText = ""
-        let image = self.getTestUIImage()
-        let result = tesseract.performOCR(on: image!)
+        
+//        //line
+//        let textline = tesseract.recognizedBlocks(from: image, for: .textline)
+//        print("---------------------------------------ocrRB TEXTLINE------------------------")
+//        do {
+//            let (value, value2) = try textline.get()
+//            print("-----------string")
+//            print("\(value)")
+//            print("-----------Recognizedblock")
+//            print("\(value2)")
+//        } catch {
+//            print("Error retrieving the value: \(error)")
+//        }
+        
+        //
+        let paragraph = tesseract.recognizedBlocks(from: image, for: .paragraph)
+        print("---------------------------------------ocrRB PARAGRAPH------------------------")
         do {
-            let value = try result.get()
-            print("The value is \(value).")
-            resultText = value
+            let (value, value2) = try paragraph.get()
+            print("-----------string")
+            print("\(value)")
+            print("-----------Recognizedblock")
+            print("\(value2)")
         } catch {
             print("Error retrieving the value: \(error)")
         }
+        
+//        // character
+//        let symbol = tesseract.recognizedBlocks(from: image, for: .symbol)
+//        print("---------------------------------------ocrRB SYMBOL------------------------")
+//        do {
+//            let (value, value2) = try symbol.get()
+//            print("-----------string")
+//            print("\(value)")
+//            print("-----------Recognizedblock")
+//            print("\(value2)")
+//        } catch {
+//            print("Error retrieving the value: \(error)")
+//        }
         return resultText
     }
-    private func getTestUIImage() -> UIImage? {
-        guard let url = Bundle(for: type(of: self)).url(forResource: "engImg", withExtension: "png") else { return nil }
-        guard let tdata = try? Data(contentsOf: url) else { return nil }
-        let tImage = UIImage(data: tdata)
-        
-        return tImage
-    }
+//    func ocrReading() -> String?{
+//        var resultText = ""
+//        let image = self.getTestUIImage()
+//        let result = tesseract.performOCR(on: image!)
+//        do {
+//            let value = try result.get()
+//            print("The value is \(value).")
+//            resultText = value
+//        } catch {
+//            print("Error retrieving the value: \(error)")
+//        }
+//        return resultText
+//    }
+//    private func getTestUIImage() -> UIImage? {
+//        guard let url = Bundle(for: type(of: self)).url(forResource: "engImg", withExtension: "png") else { return nil }
+//        guard let tdata = try? Data(contentsOf: url) else { return nil }
+//        let tImage = UIImage(data: tdata)
+//        
+//        return tImage
+//    }
 }
