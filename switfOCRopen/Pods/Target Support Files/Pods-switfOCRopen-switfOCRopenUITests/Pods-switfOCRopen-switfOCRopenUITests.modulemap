@@ -1,0 +1,6 @@
+framework module Pods_switfOCRopen_switfOCRopenUITests {
+  umbrella header "Pods-switfOCRopen-switfOCRopenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
