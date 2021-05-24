@@ -22,7 +22,8 @@ class OCRaction {
         } catch {
             print("Error retrieving the value: \(error)")
         }
-//        let block = tesseract.recognizedBlocks(from: image, for: .word)
+        let block = tesseract.recognizedBlocks(from: image, for: .block)
+    
 //        print("---------------------------------------ocrRB------------------------")
 //        do {
 //            let (value, value2) = try block.get()
