@@ -33,7 +33,8 @@ class OCRReading{
         }
         request.recognitionLevel = .accurate
         request.recognitionLanguages = ["en-US","en-GB"]
-        request.usesLanguageCorrection = true
+//        request.minimumTextHeight = 0.10
+//        request.usesLanguageCorrection = true () //言語修正を適用する？
         do {
             try requestHandler.perform([request])
         } catch{

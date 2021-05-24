@@ -14,30 +14,36 @@ class OCRaction {
     func ocrActing(_ image: UIImage) -> String{
         var resultText = "over"
 
-        let block = tesseract.recognizedBlocks(from: image, for: .block)
-        print("---------------------------------------ocrRB BLOCK------------------------")
-        do {
-            let (value, value2) = try block.get()
-            print("-----------string")
-            print("\(value)")
-            print("-----------Recognizedblock")
-            print("\(value2)")
-        } catch {
-            print("Error retrieving the value: \(error)")
-        }
-        
-//        //space.. 
-//        let word = tesseract.recognizedBlocks(from: image, for: .word)
-//        print("---------------------------------------ocrRB WORD------------------------")
+//        let block = tesseract.recognizedBlocks(from: image, for: .block)
+//        print("---------------------------------------ocrRB BLOCK------------------------")
 //        do {
-//            let (value, value2) = try word.get()
+//            let (value, value2) = try block.get()
 //            print("-----------string")
 //            print("\(value)")
 //            print("-----------Recognizedblock")
-//            print("\(value2)")
+//            for i in value2 {
+//                print(i.text)
+//                print("##")
+//            }
 //        } catch {
 //            print("Error retrieving the value: \(error)")
 //        }
+        
+        //space..
+        let word = tesseract.recognizedBlocks(from: image, for: .word)
+        print("---------------------------------------ocrRB WORD------------------------")
+        do {
+            let (value, value2) = try word.get()
+            print("-----------string")
+            print("\(value)")
+            print("-----------Recognizedblock")
+            for i in value2 {
+                print(i.text)
+                print("##")
+            }
+        } catch {
+            print("Error retrieving the value: \(error)")
+        }
         
 //        //line
 //        let textline = tesseract.recognizedBlocks(from: image, for: .textline)
@@ -47,23 +53,29 @@ class OCRaction {
 //            print("-----------string")
 //            print("\(value)")
 //            print("-----------Recognizedblock")
-//            print("\(value2)")
+//            for i in value2 {
+//                print(i.text)
+//                print("##")
+//            }
 //        } catch {
 //            print("Error retrieving the value: \(error)")
 //        }
         
-        //
-        let paragraph = tesseract.recognizedBlocks(from: image, for: .paragraph)
-        print("---------------------------------------ocrRB PARAGRAPH------------------------")
-        do {
-            let (value, value2) = try paragraph.get()
-            print("-----------string")
-            print("\(value)")
-            print("-----------Recognizedblock")
-            print("\(value2)")
-        } catch {
-            print("Error retrieving the value: \(error)")
-        }
+//        //
+//        let paragraph = tesseract.recognizedBlocks(from: image, for: .paragraph)
+//        print("---------------------------------------ocrRB PARAGRAPH------------------------")
+//        do {
+//            let (value, value2) = try paragraph.get()
+//            print("-----------string")
+//            print("\(value)")
+//            print("-----------Recognizedblock")
+//            for i in value2 {
+//                print(i.text)
+//                print("##")
+//            }
+//        } catch {
+//            print("Error retrieving the value: \(error)")
+//        }
         
 //        // character
 //        let symbol = tesseract.recognizedBlocks(from: image, for: .symbol)
@@ -73,7 +85,10 @@ class OCRaction {
 //            print("-----------string")
 //            print("\(value)")
 //            print("-----------Recognizedblock")
-//            print("\(value2)")
+//            for i in value2 {
+//                print(i.text)
+//                print("##")
+//            }
 //        } catch {
 //            print("Error retrieving the value: \(error)")
 //        }

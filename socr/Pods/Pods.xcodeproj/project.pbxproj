@@ -1,0 +1,1038 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046E1B5574140DF600D4892925EF1F64 /* SwiftOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F24B9FA7547D720CAB6D716B8BD7D6 /* SwiftOCR.swift */; };
+		1967D27A5BAA7EB704A55FBE068B6350 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B86B508E3E4C90AE8AD9A8B47FD0C0 /* Matrix.swift */; };
+		1AEC8C8D70A84D2F6A660E2DE53E9819 /* FFNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736535C66147FCFCBA05272D3B369FC /* FFNN.swift */; };
+		3A4BEBF24209A7FA506A0D2E7B876322 /* TrainingBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A637F621C2CEE70BD8B3B4389033704 /* TrainingBackground_2.png */; };
+		3B8434A983FC4151105E3DE3AA417800 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E83542686DF444C670D3DEE5F63601 /* Storage.swift */; };
+		3DEAB708D1C658CCF51C0A23784C3846 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6352244CB2AF4E5E36662FA6E569E3AF /* Extensions.swift */; };
+		4234BC5DC3F9D6109BBB53DAE1799851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4535542B9388BC1C75F0019B270DD04D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		47A9FD7DFD1945589C586CAD5F3133D0 /* FFNN+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B073CBF5256B8D762C1024BB28637 /* FFNN+Storage.swift */; };
+		5A4CF1907DC39A26C4A2107B54B61129 /* TrainingBackground_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D51B5A66BECD8E67C212A02FC2EF1B /* TrainingBackground_4.png */; };
+		60FEE5BEE4354AF09826399E65F00A80 /* Pods-socrTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB55897E951663299A2051D2F777252 /* Pods-socrTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		735AE7E501E0837D6D1B0A3BFF62E875 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F980C4DD61938D757747381F42D75 /* UnionFind.swift */; };
+		79C6BB5F16036BD31309039D7865BFBB /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75598E4DA4442233AF23314AB5DAC06 /* Vector.swift */; };
+		828D1C3EDB4B52EBEAF1488E28CAF266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8D285247B2840F177C35B6719A4AFF59 /* TrainingBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB09194092944D15C29045DE00A7326 /* TrainingBackground_1.png */; };
+		9261819AB133BAAE0530D718002198A5 /* Pods-socr-socrUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1411048CDC6BED4CCC4AC15D896EF636 /* Pods-socr-socrUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93D6E5B13864EB7AF8E09BFD378557DC /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96498D6962B6CF8A5D799B53F43C242C /* Random.swift */; };
+		A6A0A7F23D5FC85960AED374B4A3B303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A777ECA8A6212680285845162C4A261E /* Pods-socr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E6DED406112510421E79ACDB62C5D2 /* Pods-socr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADBCBC3C506187FAE411BC773A8457E1 /* OCR-Network in Resources */ = {isa = PBXBuildFile; fileRef = 35F4918F68DAE87B9CE26E71800F101F /* OCR-Network */; };
+		BD81871482D3D4BAE55228B04ECBB626 /* TrainingBackground_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E1E2D93ADE256F1B6CF5CFDFEF6807 /* TrainingBackground_3.png */; };
+		C0B7707AB4D19526A045F07184DE2C81 /* Pods-socrTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B19F3A16CB6172B8287717B48A0A1AC /* Pods-socrTests-dummy.m */; };
+		C2E35DCF0E43B4351643E1E6C7D21C6B /* SwiftOCR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F43D0FA15C099480873A8F109605650 /* SwiftOCR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7FC76A659616A20E6AF6A4270AFD34E /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F1363AD703378A4DAB63D420CB30B /* Operations.swift */; };
+		D06642FAB6937EA17ED2C21F6DA80D00 /* Pods-socr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0659C7FBE7EB63051D1455CA19F80FEC /* Pods-socr-dummy.m */; };
+		D16086427BDE42666AA8A920C17D8C5F /* Pods-socr-socrUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59474EDEDEA5634D0881F47667C92C13 /* Pods-socr-socrUITests-dummy.m */; };
+		D1E15580854110C041F6E100B5EDC7BB /* SwiftOCRTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65836F6AE527B5AD4B0B1AE1BFAFC432 /* SwiftOCRTraining.swift */; };
+		DB5348FC5172B80AA2DB18428E237357 /* CrossPlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554DEC3194816673AB702033237EA859 /* CrossPlatformSupport.swift */; };
+		E5781F3B34BA75B4991D9A207DAA04A7 /* SwiftOCR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252F6183947796B2924A1FDD35EF3 /* SwiftOCR-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13F0EA88778DB793E63C89EEE1FAEFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A64130890576FC93F237956BFF85D27;
+			remoteInfo = SwiftOCR;
+		};
+		4B65FD5B8559044D202BE66CDFCDFD30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A64130890576FC93F237956BFF85D27;
+			remoteInfo = SwiftOCR;
+		};
+		5DA82A8F7876544955B10F7C04CF71C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C9C1376AAFC193A7D30F5302A81ADF7;
+			remoteInfo = "Pods-socr";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0659C7FBE7EB63051D1455CA19F80FEC /* Pods-socr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socr-dummy.m"; sourceTree = "<group>"; };
+		0A7EC1A55AA70BE29FEFD8F664A7750B /* Pods-socr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socr.debug.xcconfig"; sourceTree = "<group>"; };
+		0B5F980C4DD61938D757747381F42D75 /* UnionFind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnionFind.swift; path = framework/SwiftOCR/UnionFind.swift; sourceTree = "<group>"; };
+		0E433D164BA934B1B5619A3CDC201D1D /* Pods-socrTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-socrTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1411048CDC6BED4CCC4AC15D896EF636 /* Pods-socr-socrUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socr-socrUITests-umbrella.h"; sourceTree = "<group>"; };
+		1D484ED6A93104FC8EDF5A2AA7816624 /* Pods-socr-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-socr-frameworks.sh"; sourceTree = "<group>"; };
+		1E7EEF30CBA8DCAC83A43AE3E0847C2F /* Pods-socr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-socr.modulemap"; sourceTree = "<group>"; };
+		226252F6183947796B2924A1FDD35EF3 /* SwiftOCR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOCR-dummy.m"; sourceTree = "<group>"; };
+		257F1363AD703378A4DAB63D420CB30B /* Operations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operations.swift; path = framework/SwiftOCR/FFNN/Operations.swift; sourceTree = "<group>"; };
+		2A637F621C2CEE70BD8B3B4389033704 /* TrainingBackground_2.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TrainingBackground_2.png; path = "framework/SwiftOCR/Realistic Training Images/TrainingBackground_2.png"; sourceTree = "<group>"; };
+		31E6DED406112510421E79ACDB62C5D2 /* Pods-socr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socr-umbrella.h"; sourceTree = "<group>"; };
+		340F7524E8FBEA7B1AFF529D836AAB7F /* SwiftOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOCR.debug.xcconfig; sourceTree = "<group>"; };
+		35F4918F68DAE87B9CE26E71800F101F /* OCR-Network */ = {isa = PBXFileReference; includeInIndex = 1; name = "OCR-Network"; path = "framework/SwiftOCR/OCR-Network"; sourceTree = "<group>"; };
+		36C81AFED2DD1905540F87B97109441B /* Pods-socr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socr.release.xcconfig"; sourceTree = "<group>"; };
+		4142FC76B915DAE59FEAF2E034E903A1 /* SwiftOCR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftOCR.modulemap; sourceTree = "<group>"; };
+		44238F78B3324501C518EC55E3C5B825 /* Pods-socr-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socr-Info.plist"; sourceTree = "<group>"; };
+		45A2BB350C4F609258785EC0F843FF32 /* SwiftOCR-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOCR-prefix.pch"; sourceTree = "<group>"; };
+		48E83542686DF444C670D3DEE5F63601 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = framework/SwiftOCR/FFNN/Storage.swift; sourceTree = "<group>"; };
+		4F43D0FA15C099480873A8F109605650 /* SwiftOCR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOCR-umbrella.h"; sourceTree = "<group>"; };
+		554DEC3194816673AB702033237EA859 /* CrossPlatformSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossPlatformSupport.swift; path = framework/SwiftOCR/CrossPlatformSupport.swift; sourceTree = "<group>"; };
+		56D51B5A66BECD8E67C212A02FC2EF1B /* TrainingBackground_4.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TrainingBackground_4.png; path = "framework/SwiftOCR/Realistic Training Images/TrainingBackground_4.png"; sourceTree = "<group>"; };
+		59474EDEDEA5634D0881F47667C92C13 /* Pods-socr-socrUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socr-socrUITests-dummy.m"; sourceTree = "<group>"; };
+		6352244CB2AF4E5E36662FA6E569E3AF /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = framework/SwiftOCR/Extensions.swift; sourceTree = "<group>"; };
+		63E1BA4774AE46018422855FDBF6D795 /* SwiftOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftOCR.framework; path = SwiftOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DDB54EC6A145B05FF95944A55A6B87 /* Pods-socr-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socr-acknowledgements.plist"; sourceTree = "<group>"; };
+		65836F6AE527B5AD4B0B1AE1BFAFC432 /* SwiftOCRTraining.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftOCRTraining.swift; path = framework/SwiftOCR/SwiftOCRTraining.swift; sourceTree = "<group>"; };
+		6A75C3CDB943FEC85DB96D1A510BA101 /* Pods-socrTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socrTests-Info.plist"; sourceTree = "<group>"; };
+		6DE34CA069667A54676905FE80D933BA /* Pods-socr-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-socr-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7B19F3A16CB6172B8287717B48A0A1AC /* Pods-socrTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socrTests-dummy.m"; sourceTree = "<group>"; };
+		7F8C8A2E276C772C136DCCEF496F0950 /* Pods_socrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_socrTests.framework; path = "Pods-socrTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C4C2300874DA151B37F7F8FB733E56 /* Pods-socrTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socrTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E8C25575642C3506895D17FA471C7FA /* Pods-socr-socrUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-socr-socrUITests-frameworks.sh"; sourceTree = "<group>"; };
+		96498D6962B6CF8A5D799B53F43C242C /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = framework/SwiftOCR/FFNN/Random.swift; sourceTree = "<group>"; };
+		9D1D8BCF691A0FDBF9C1FA7262496870 /* Pods-socrTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-socrTests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3746F553A1955536271B1CF9E9AD197 /* Pods-socrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4B86B508E3E4C90AE8AD9A8B47FD0C0 /* Matrix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = framework/SwiftOCR/FFNN/Matrix.swift; sourceTree = "<group>"; };
+		A5ACB31065B3615A0857E311AC16ACB1 /* Pods_socr_socrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_socr_socrUITests.framework; path = "Pods-socr-socrUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66D578134BA1CE7D73BC6E4E6658F8E /* Pods-socr-socrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socr-socrUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8D8618C1914B14DC15D3A99BB6977B6 /* Pods-socr-socrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socr-socrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE9CE022BDA69FD9090943893C651C10 /* SwiftOCR-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftOCR-Info.plist"; sourceTree = "<group>"; };
+		C75598E4DA4442233AF23314AB5DAC06 /* Vector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vector.swift; path = framework/SwiftOCR/FFNN/Vector.swift; sourceTree = "<group>"; };
+		CB938FEC34F5B3716160F91CE7E12136 /* Pods-socr-socrUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socr-socrUITests-Info.plist"; sourceTree = "<group>"; };
+		CFDF3B878B8DCC0E8A50CE11815E546E /* Pods-socrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socrTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7E1E2D93ADE256F1B6CF5CFDFEF6807 /* TrainingBackground_3.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TrainingBackground_3.png; path = "framework/SwiftOCR/Realistic Training Images/TrainingBackground_3.png"; sourceTree = "<group>"; };
+		DA4B073CBF5256B8D762C1024BB28637 /* FFNN+Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FFNN+Storage.swift"; path = "framework/SwiftOCR/FFNN/FFNN+Storage.swift"; sourceTree = "<group>"; };
+		DCB55897E951663299A2051D2F777252 /* Pods-socrTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socrTests-umbrella.h"; sourceTree = "<group>"; };
+		E070B2A2F249DB28741F6137609F0A50 /* Pods-socr-socrUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-socr-socrUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E0CD3EEEC796DFF3D2DB697845AF9AE5 /* Pods-socr-socrUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-socr-socrUITests.modulemap"; sourceTree = "<group>"; };
+		E736535C66147FCFCBA05272D3B369FC /* FFNN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FFNN.swift; path = framework/SwiftOCR/FFNN/FFNN.swift; sourceTree = "<group>"; };
+		EBCE0204121B400F2DA3FDD3D7589B66 /* Pods-socr-socrUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socr-socrUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F170A2E299CA7C29BE6AA872F71D9764 /* Pods_socr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_socr.framework; path = "Pods-socr.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3478E7119B683420B25CA39DABD1C0E /* SwiftOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOCR.release.xcconfig; sourceTree = "<group>"; };
+		F3F24B9FA7547D720CAB6D716B8BD7D6 /* SwiftOCR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftOCR.swift; path = framework/SwiftOCR/SwiftOCR.swift; sourceTree = "<group>"; };
+		FEB09194092944D15C29045DE00A7326 /* TrainingBackground_1.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TrainingBackground_1.png; path = "framework/SwiftOCR/Realistic Training Images/TrainingBackground_1.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16BF7BE37CB627341F632FA62236B48A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4234BC5DC3F9D6109BBB53DAE1799851 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AAB1BB733B363FA92B8C2FCAD61733A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828D1C3EDB4B52EBEAF1488E28CAF266 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE463D0C2AD6D575ABD1280DB62B9592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A0A7F23D5FC85960AED374B4A3B303 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13AF00B31418FAF8E34C27B34A7E462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4535542B9388BC1C75F0019B270DD04D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		066502BD5436D61E0C5030020DBE4BC3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6595013A86DFC474FEDDFA517504C7E0 /* Pods-socr */,
+				9BCED754227FD42489DDA5F6B76A3683 /* Pods-socr-socrUITests */,
+				DDCE2AFD17087CB541FA563495B74EE9 /* Pods-socrTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1DF3BA01AE2C6784B18A0046707D19A8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4142FC76B915DAE59FEAF2E034E903A1 /* SwiftOCR.modulemap */,
+				226252F6183947796B2924A1FDD35EF3 /* SwiftOCR-dummy.m */,
+				BE9CE022BDA69FD9090943893C651C10 /* SwiftOCR-Info.plist */,
+				45A2BB350C4F609258785EC0F843FF32 /* SwiftOCR-prefix.pch */,
+				4F43D0FA15C099480873A8F109605650 /* SwiftOCR-umbrella.h */,
+				340F7524E8FBEA7B1AFF529D836AAB7F /* SwiftOCR.debug.xcconfig */,
+				F3478E7119B683420B25CA39DABD1C0E /* SwiftOCR.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftOCR";
+			sourceTree = "<group>";
+		};
+		4D175549E21A1170F38DE225390D1726 /* SwiftOCR */ = {
+			isa = PBXGroup;
+			children = (
+				554DEC3194816673AB702033237EA859 /* CrossPlatformSupport.swift */,
+				6352244CB2AF4E5E36662FA6E569E3AF /* Extensions.swift */,
+				E736535C66147FCFCBA05272D3B369FC /* FFNN.swift */,
+				DA4B073CBF5256B8D762C1024BB28637 /* FFNN+Storage.swift */,
+				A4B86B508E3E4C90AE8AD9A8B47FD0C0 /* Matrix.swift */,
+				257F1363AD703378A4DAB63D420CB30B /* Operations.swift */,
+				96498D6962B6CF8A5D799B53F43C242C /* Random.swift */,
+				48E83542686DF444C670D3DEE5F63601 /* Storage.swift */,
+				F3F24B9FA7547D720CAB6D716B8BD7D6 /* SwiftOCR.swift */,
+				65836F6AE527B5AD4B0B1AE1BFAFC432 /* SwiftOCRTraining.swift */,
+				0B5F980C4DD61938D757747381F42D75 /* UnionFind.swift */,
+				C75598E4DA4442233AF23314AB5DAC06 /* Vector.swift */,
+				9428EA2ECF15ACAD62BB1D84399B7FA1 /* Resources */,
+				1DF3BA01AE2C6784B18A0046707D19A8 /* Support Files */,
+			);
+			name = SwiftOCR;
+			path = SwiftOCR;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		618F8974273D5A0E98288912BED50541 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F170A2E299CA7C29BE6AA872F71D9764 /* Pods_socr.framework */,
+				A5ACB31065B3615A0857E311AC16ACB1 /* Pods_socr_socrUITests.framework */,
+				7F8C8A2E276C772C136DCCEF496F0950 /* Pods_socrTests.framework */,
+				63E1BA4774AE46018422855FDBF6D795 /* SwiftOCR.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64F9011D200FB288DC90EDB3BD92FBFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D175549E21A1170F38DE225390D1726 /* SwiftOCR */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6595013A86DFC474FEDDFA517504C7E0 /* Pods-socr */ = {
+			isa = PBXGroup;
+			children = (
+				1E7EEF30CBA8DCAC83A43AE3E0847C2F /* Pods-socr.modulemap */,
+				6DE34CA069667A54676905FE80D933BA /* Pods-socr-acknowledgements.markdown */,
+				64DDB54EC6A145B05FF95944A55A6B87 /* Pods-socr-acknowledgements.plist */,
+				0659C7FBE7EB63051D1455CA19F80FEC /* Pods-socr-dummy.m */,
+				1D484ED6A93104FC8EDF5A2AA7816624 /* Pods-socr-frameworks.sh */,
+				44238F78B3324501C518EC55E3C5B825 /* Pods-socr-Info.plist */,
+				31E6DED406112510421E79ACDB62C5D2 /* Pods-socr-umbrella.h */,
+				0A7EC1A55AA70BE29FEFD8F664A7750B /* Pods-socr.debug.xcconfig */,
+				36C81AFED2DD1905540F87B97109441B /* Pods-socr.release.xcconfig */,
+			);
+			name = "Pods-socr";
+			path = "Target Support Files/Pods-socr";
+			sourceTree = "<group>";
+		};
+		9428EA2ECF15ACAD62BB1D84399B7FA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35F4918F68DAE87B9CE26E71800F101F /* OCR-Network */,
+				FEB09194092944D15C29045DE00A7326 /* TrainingBackground_1.png */,
+				2A637F621C2CEE70BD8B3B4389033704 /* TrainingBackground_2.png */,
+				D7E1E2D93ADE256F1B6CF5CFDFEF6807 /* TrainingBackground_3.png */,
+				56D51B5A66BECD8E67C212A02FC2EF1B /* TrainingBackground_4.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9BCED754227FD42489DDA5F6B76A3683 /* Pods-socr-socrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0CD3EEEC796DFF3D2DB697845AF9AE5 /* Pods-socr-socrUITests.modulemap */,
+				E070B2A2F249DB28741F6137609F0A50 /* Pods-socr-socrUITests-acknowledgements.markdown */,
+				EBCE0204121B400F2DA3FDD3D7589B66 /* Pods-socr-socrUITests-acknowledgements.plist */,
+				59474EDEDEA5634D0881F47667C92C13 /* Pods-socr-socrUITests-dummy.m */,
+				8E8C25575642C3506895D17FA471C7FA /* Pods-socr-socrUITests-frameworks.sh */,
+				CB938FEC34F5B3716160F91CE7E12136 /* Pods-socr-socrUITests-Info.plist */,
+				1411048CDC6BED4CCC4AC15D896EF636 /* Pods-socr-socrUITests-umbrella.h */,
+				B8D8618C1914B14DC15D3A99BB6977B6 /* Pods-socr-socrUITests.debug.xcconfig */,
+				B66D578134BA1CE7D73BC6E4E6658F8E /* Pods-socr-socrUITests.release.xcconfig */,
+			);
+			name = "Pods-socr-socrUITests";
+			path = "Target Support Files/Pods-socr-socrUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				64F9011D200FB288DC90EDB3BD92FBFB /* Pods */,
+				618F8974273D5A0E98288912BED50541 /* Products */,
+				066502BD5436D61E0C5030020DBE4BC3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDCE2AFD17087CB541FA563495B74EE9 /* Pods-socrTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D1D8BCF691A0FDBF9C1FA7262496870 /* Pods-socrTests.modulemap */,
+				0E433D164BA934B1B5619A3CDC201D1D /* Pods-socrTests-acknowledgements.markdown */,
+				81C4C2300874DA151B37F7F8FB733E56 /* Pods-socrTests-acknowledgements.plist */,
+				7B19F3A16CB6172B8287717B48A0A1AC /* Pods-socrTests-dummy.m */,
+				6A75C3CDB943FEC85DB96D1A510BA101 /* Pods-socrTests-Info.plist */,
+				DCB55897E951663299A2051D2F777252 /* Pods-socrTests-umbrella.h */,
+				A3746F553A1955536271B1CF9E9AD197 /* Pods-socrTests.debug.xcconfig */,
+				CFDF3B878B8DCC0E8A50CE11815E546E /* Pods-socrTests.release.xcconfig */,
+			);
+			name = "Pods-socrTests";
+			path = "Target Support Files/Pods-socrTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		26A38F29434069CCD68D580D240C85A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E35DCF0E43B4351643E1E6C7D21C6B /* SwiftOCR-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C8B19857C88F9668C1A5AE22C6CFB0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FEE5BEE4354AF09826399E65F00A80 /* Pods-socrTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81B6711100E5492C16497F2F307770C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A777ECA8A6212680285845162C4A261E /* Pods-socr-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEDBDDB6B353285B6FB390FDC0D45BB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9261819AB133BAAE0530D718002198A5 /* Pods-socr-socrUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		28C321E43B489B84E30E8BEC29748E3E /* Pods-socrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39806D39AC3FD15311B8979D5D9FC69C /* Build configuration list for PBXNativeTarget "Pods-socrTests" */;
+			buildPhases = (
+				5C8B19857C88F9668C1A5AE22C6CFB0E /* Headers */,
+				B4C35FBAAAD821CC58093EB6986BB8B7 /* Sources */,
+				4AAB1BB733B363FA92B8C2FCAD61733A /* Frameworks */,
+				305DC9BCC9BE81E6A2B41192D098C0AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45F647566725FCB2D83D58CBE6B3EABC /* PBXTargetDependency */,
+			);
+			name = "Pods-socrTests";
+			productName = "Pods-socrTests";
+			productReference = 7F8C8A2E276C772C136DCCEF496F0950 /* Pods_socrTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C9C1376AAFC193A7D30F5302A81ADF7 /* Pods-socr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3E69F86A8C10B78FAEF27A7D2562C1 /* Build configuration list for PBXNativeTarget "Pods-socr" */;
+			buildPhases = (
+				81B6711100E5492C16497F2F307770C4 /* Headers */,
+				D6D47844547967F1ED317E1D4C46F24D /* Sources */,
+				16BF7BE37CB627341F632FA62236B48A /* Frameworks */,
+				29E5D74E6F17F1B8E1DC0E071A527B64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3F1284B4AEB8A347957F56952F064CC /* PBXTargetDependency */,
+			);
+			name = "Pods-socr";
+			productName = "Pods-socr";
+			productReference = F170A2E299CA7C29BE6AA872F71D9764 /* Pods_socr.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5E3202A324489705A8281F8F4F67CB4A /* Pods-socr-socrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D15C52E35BD16EB334496E9B979B0CD4 /* Build configuration list for PBXNativeTarget "Pods-socr-socrUITests" */;
+			buildPhases = (
+				DEDBDDB6B353285B6FB390FDC0D45BB6 /* Headers */,
+				2A451AE163E102B64998400A034F6770 /* Sources */,
+				BE463D0C2AD6D575ABD1280DB62B9592 /* Frameworks */,
+				B50566F467927220C7C2FDF03F07A00E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C043BAA29B869CDF841ED4DD6030CD3D /* PBXTargetDependency */,
+			);
+			name = "Pods-socr-socrUITests";
+			productName = "Pods-socr-socrUITests";
+			productReference = A5ACB31065B3615A0857E311AC16ACB1 /* Pods_socr_socrUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8A64130890576FC93F237956BFF85D27 /* SwiftOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FDE15B293A507C027044F02548D0BFE /* Build configuration list for PBXNativeTarget "SwiftOCR" */;
+			buildPhases = (
+				26A38F29434069CCD68D580D240C85A3 /* Headers */,
+				1ED81B78AE3FFCADB7A5C596B2593198 /* Sources */,
+				F13AF00B31418FAF8E34C27B34A7E462 /* Frameworks */,
+				7FB3DCDD9C31346150EE832E325F2059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftOCR;
+			productName = SwiftOCR;
+			productReference = 63E1BA4774AE46018422855FDBF6D795 /* SwiftOCR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 618F8974273D5A0E98288912BED50541 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C9C1376AAFC193A7D30F5302A81ADF7 /* Pods-socr */,
+				5E3202A324489705A8281F8F4F67CB4A /* Pods-socr-socrUITests */,
+				28C321E43B489B84E30E8BEC29748E3E /* Pods-socrTests */,
+				8A64130890576FC93F237956BFF85D27 /* SwiftOCR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29E5D74E6F17F1B8E1DC0E071A527B64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305DC9BCC9BE81E6A2B41192D098C0AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB3DCDD9C31346150EE832E325F2059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBCBC3C506187FAE411BC773A8457E1 /* OCR-Network in Resources */,
+				8D285247B2840F177C35B6719A4AFF59 /* TrainingBackground_1.png in Resources */,
+				3A4BEBF24209A7FA506A0D2E7B876322 /* TrainingBackground_2.png in Resources */,
+				BD81871482D3D4BAE55228B04ECBB626 /* TrainingBackground_3.png in Resources */,
+				5A4CF1907DC39A26C4A2107B54B61129 /* TrainingBackground_4.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B50566F467927220C7C2FDF03F07A00E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ED81B78AE3FFCADB7A5C596B2593198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5348FC5172B80AA2DB18428E237357 /* CrossPlatformSupport.swift in Sources */,
+				3DEAB708D1C658CCF51C0A23784C3846 /* Extensions.swift in Sources */,
+				47A9FD7DFD1945589C586CAD5F3133D0 /* FFNN+Storage.swift in Sources */,
+				1AEC8C8D70A84D2F6A660E2DE53E9819 /* FFNN.swift in Sources */,
+				1967D27A5BAA7EB704A55FBE068B6350 /* Matrix.swift in Sources */,
+				C7FC76A659616A20E6AF6A4270AFD34E /* Operations.swift in Sources */,
+				93D6E5B13864EB7AF8E09BFD378557DC /* Random.swift in Sources */,
+				3B8434A983FC4151105E3DE3AA417800 /* Storage.swift in Sources */,
+				E5781F3B34BA75B4991D9A207DAA04A7 /* SwiftOCR-dummy.m in Sources */,
+				046E1B5574140DF600D4892925EF1F64 /* SwiftOCR.swift in Sources */,
+				D1E15580854110C041F6E100B5EDC7BB /* SwiftOCRTraining.swift in Sources */,
+				735AE7E501E0837D6D1B0A3BFF62E875 /* UnionFind.swift in Sources */,
+				79C6BB5F16036BD31309039D7865BFBB /* Vector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A451AE163E102B64998400A034F6770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D16086427BDE42666AA8A920C17D8C5F /* Pods-socr-socrUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4C35FBAAAD821CC58093EB6986BB8B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B7707AB4D19526A045F07184DE2C81 /* Pods-socrTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D47844547967F1ED317E1D4C46F24D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06642FAB6937EA17ED2C21F6DA80D00 /* Pods-socr-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45F647566725FCB2D83D58CBE6B3EABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socr";
+			target = 5C9C1376AAFC193A7D30F5302A81ADF7 /* Pods-socr */;
+			targetProxy = 5DA82A8F7876544955B10F7C04CF71C1 /* PBXContainerItemProxy */;
+		};
+		C043BAA29B869CDF841ED4DD6030CD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftOCR;
+			target = 8A64130890576FC93F237956BFF85D27 /* SwiftOCR */;
+			targetProxy = 4B65FD5B8559044D202BE66CDFCDFD30 /* PBXContainerItemProxy */;
+		};
+		C3F1284B4AEB8A347957F56952F064CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftOCR;
+			target = 8A64130890576FC93F237956BFF85D27 /* SwiftOCR */;
+			targetProxy = 13F0EA88778DB793E63C89EEE1FAEFA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		181DA92BCB177ECA7FDF83538BFFB901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3478E7119B683420B25CA39DABD1C0E /* SwiftOCR.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftOCR/SwiftOCR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftOCR/SwiftOCR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftOCR/SwiftOCR.modulemap";
+				PRODUCT_MODULE_NAME = SwiftOCR;
+				PRODUCT_NAME = SwiftOCR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37ADE79D8094B334A34448D8D5E3054E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D8618C1914B14DC15D3A99BB6977B6 /* Pods-socr-socrUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-socr-socrUITests/Pods-socr-socrUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-socr-socrUITests/Pods-socr-socrUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		38471636709E86EB872A8BC34768B526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340F7524E8FBEA7B1AFF529D836AAB7F /* SwiftOCR.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftOCR/SwiftOCR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftOCR/SwiftOCR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftOCR/SwiftOCR.modulemap";
+				PRODUCT_MODULE_NAME = SwiftOCR;
+				PRODUCT_NAME = SwiftOCR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4EF1B392CA0D8F84DA25B7AB5E7E8562 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7EC1A55AA70BE29FEFD8F664A7750B /* Pods-socr.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-socr/Pods-socr-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-socr/Pods-socr.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ADD044C5D4BCE4EFFCCC3806192620BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3746F553A1955536271B1CF9E9AD197 /* Pods-socrTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-socrTests/Pods-socrTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-socrTests/Pods-socrTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B427EEBC6501DF409FA6921DAE95E37A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66D578134BA1CE7D73BC6E4E6658F8E /* Pods-socr-socrUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-socr-socrUITests/Pods-socr-socrUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-socr-socrUITests/Pods-socr-socrUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BF1D18908419C5E1B2D1899DF268AF0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C81AFED2DD1905540F87B97109441B /* Pods-socr.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-socr/Pods-socr-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-socr/Pods-socr.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E05BEC50BA07075387A67610CFB6BB1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFDF3B878B8DCC0E8A50CE11815E546E /* Pods-socrTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-socrTests/Pods-socrTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-socrTests/Pods-socrTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C3E69F86A8C10B78FAEF27A7D2562C1 /* Build configuration list for PBXNativeTarget "Pods-socr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF1B392CA0D8F84DA25B7AB5E7E8562 /* Debug */,
+				BF1D18908419C5E1B2D1899DF268AF0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39806D39AC3FD15311B8979D5D9FC69C /* Build configuration list for PBXNativeTarget "Pods-socrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD044C5D4BCE4EFFCCC3806192620BD /* Debug */,
+				E05BEC50BA07075387A67610CFB6BB1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
+				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FDE15B293A507C027044F02548D0BFE /* Build configuration list for PBXNativeTarget "SwiftOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38471636709E86EB872A8BC34768B526 /* Debug */,
+				181DA92BCB177ECA7FDF83538BFFB901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D15C52E35BD16EB334496E9B979B0CD4 /* Build configuration list for PBXNativeTarget "Pods-socr-socrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37ADE79D8094B334A34448D8D5E3054E /* Debug */,
+				B427EEBC6501DF409FA6921DAE95E37A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

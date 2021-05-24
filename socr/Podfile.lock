@@ -1,0 +1,22 @@
+PODS:
+  - SwiftOCR (1.2.1)
+
+DEPENDENCIES:
+  - SwiftOCR (from `https://github.com/garnele007/SwiftOCR.git`, tag `1.2.1`)
+
+EXTERNAL SOURCES:
+  SwiftOCR:
+    :git: https://github.com/garnele007/SwiftOCR.git
+    :tag: 1.2.1
+
+CHECKOUT OPTIONS:
+  SwiftOCR:
+    :git: https://github.com/garnele007/SwiftOCR.git
+    :tag: 1.2.1
+
+SPEC CHECKSUMS:
+  SwiftOCR: ce3f8fa0304a1fa6f918b69db459163ef7f47d87
+
+PODFILE CHECKSUM: 01328c71acab182e7f57703cf72514722fcf85a5
+
+COCOAPODS: 1.10.1
