@@ -1,0 +1,6 @@
+framework module Pods_cameraApp_cameraAppUITests {
+  umbrella header "Pods-cameraApp-cameraAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

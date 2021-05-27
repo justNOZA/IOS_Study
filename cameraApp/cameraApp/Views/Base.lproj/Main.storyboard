@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MaD-ZN-khM">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8MS-ht-ld8">
+            <objects>
+                <navigationController id="MaD-ZN-khM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dye-JZ-Kbd">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7yH-hd-UE5" kind="relationship" relationship="rootViewController" id="ZJI-sg-Hzu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQb-Gj-DRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1068" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Au-ps-Big">
+            <objects>
+                <viewController id="7yH-hd-UE5" customClass="ViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnC-Nh-lmF">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-Mm-FUN">
+                                <rect key="frame" x="20" y="70" width="794" height="1044"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="photoCollection"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyW-5Y-bAb">
+                                <rect key="frame" x="100" y="1124" width="634" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="camera"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="photoOn:" destination="7yH-hd-UE5" eventType="touchUpInside" id="GX6-0P-7fa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kk4-ZJ-WMz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="mainPage">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="dyW-5Y-bAb" firstAttribute="top" secondItem="pSF-Mm-FUN" secondAttribute="bottom" constant="10" id="CpC-6v-4tK"/>
+                            <constraint firstItem="dyW-5Y-bAb" firstAttribute="leading" secondItem="kk4-ZJ-WMz" secondAttribute="leading" constant="100" id="XyY-Wa-d8y"/>
+                            <constraint firstItem="kk4-ZJ-WMz" firstAttribute="bottom" secondItem="pSF-Mm-FUN" secondAttribute="bottom" constant="60" id="Z1q-qP-b3c"/>
+                            <constraint firstItem="pSF-Mm-FUN" firstAttribute="leading" secondItem="kk4-ZJ-WMz" secondAttribute="leading" constant="20" id="akk-qg-Dmu"/>
+                            <constraint firstItem="pSF-Mm-FUN" firstAttribute="top" secondItem="kk4-ZJ-WMz" secondAttribute="top" constant="20" id="eZG-aW-aWc"/>
+                            <constraint firstItem="kk4-ZJ-WMz" firstAttribute="bottom" secondItem="dyW-5Y-bAb" secondAttribute="bottom" constant="20" id="inM-6z-88o"/>
+                            <constraint firstItem="kk4-ZJ-WMz" firstAttribute="trailing" secondItem="pSF-Mm-FUN" secondAttribute="trailing" constant="20" id="s3c-hq-v8b"/>
+                            <constraint firstItem="kk4-ZJ-WMz" firstAttribute="trailing" secondItem="dyW-5Y-bAb" secondAttribute="trailing" constant="100" id="xzy-Ae-5Ko"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qS4-Ha-T5T"/>
+                    <connections>
+                        <outlet property="photoView" destination="pSF-Mm-FUN" id="kDr-xy-1Qs"/>
+                        <segue destination="vvx-kC-Wq3" kind="presentation" identifier="showText" id="k7a-Mg-Iy0"/>
+                        <segue destination="qdZ-l9-g14" kind="presentation" identifier="showCamera" modalPresentationStyle="fullScreen" id="Exf-CI-6VK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPl-dA-2uE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="65"/>
+        </scene>
+        <!--Photo Text Controller-->
+        <scene sceneID="hn7-B6-Y8d">
+            <objects>
+                <viewController id="vvx-kC-Wq3" customClass="PhotoTextController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bEq-Gf-SQN">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arc-5j-lsv">
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="content"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="biv-eL-YPQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="textPage">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="Arc-5j-lsv" firstAttribute="leading" secondItem="biv-eL-YPQ" secondAttribute="leading" id="2qG-aE-H0s"/>
+                            <constraint firstItem="Arc-5j-lsv" firstAttribute="top" secondItem="biv-eL-YPQ" secondAttribute="top" id="Rq2-XL-UcS"/>
+                            <constraint firstItem="biv-eL-YPQ" firstAttribute="bottom" secondItem="Arc-5j-lsv" secondAttribute="bottom" id="Yob-Ni-j0g"/>
+                            <constraint firstItem="biv-eL-YPQ" firstAttribute="trailing" secondItem="Arc-5j-lsv" secondAttribute="trailing" id="qk4-hv-zy0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BcN-oT-9rC"/>
+                    <connections>
+                        <outlet property="photoText" destination="Arc-5j-lsv" id="CEm-a2-MoR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeC-Re-Jff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="75"/>
+        </scene>
+        <!--Cam View Controller-->
+        <scene sceneID="VMa-ks-g1N">
+            <objects>
+                <viewController id="qdZ-l9-g14" customClass="CamViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mf1-gA-ZiI">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="USk-a8-EjR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rk4-Ai-iOi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLA-mW-YMx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="737"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
