@@ -10,7 +10,7 @@ import VisionKit
 import Photos
 import TesseractOCR
 
-class ViewController: UIViewController, UINavigationControllerDelegate {
+class ViewController: UIViewController {
 
     var ocr = OCRReading()
     override func viewDidLoad() {
@@ -79,16 +79,41 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
     }
 }
 
-extension ViewController:UIImagePickerControllerDelegate{
+extension ViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         let wide = imageViewCollection.frame.width
         let img = UIImageView()
-        img.image = image
+        img.contentMode = .scaleAspectFit
+        setImage(input: image)
+        img.image = getUIImage()
+        
         imageViewCollection.addSubview(img)
         plusContraint(img, CGFloat(0), wide)
         self.dismiss(animated: true, completion: nil)
+    }
+    private func setImage(input:UIImage) {
+        if let data = input.jpegData(compressionQuality: 0.8) {
+            let filename = getDocumentsDirectory().appendingPathComponent("example.jpg")
+            try? data.write(to: filename)
+        }
+    }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    private func getUIImage() -> UIImage?{
+        let url = getDocumentsDirectory().appendingPathComponent("example.jpg")
+        guard let data = try? Data(contentsOf: url) else {return nil}
+        let image = UIImage(data: data)
+        return image
+    }
+    private func getExample() -> UIImage? {
+        guard let url = Bundle(for: type(of:self)).url(forResource: "example", withExtension: "jpg") else {return nil}
+        guard let data = try? Data(contentsOf: url) else {return nil}
+        let image = UIImage(data: data)
+        return image
     }
 }
 

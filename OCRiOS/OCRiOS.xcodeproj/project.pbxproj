@@ -21,6 +21,7 @@
 		96437C37265E24C80052ABEF /* OCRReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96437C36265E24C80052ABEF /* OCRReading.swift */; };
 		96437C39265E25FB0052ABEF /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96437C38265E25FB0052ABEF /* UIImageExtension.swift */; };
 		96437C3B265E2D2D0052ABEF /* ControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96437C3A265E2D2D0052ABEF /* ControllerTwo.swift */; };
+		967E6D09266078E300B23211 /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967E6D08266078E300B23211 /* example.jpg */; };
 		9A08C3BB89DBB681DA7CD7C4 /* Pods_OCRiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F56E5E9C70E4441B65F765 /* Pods_OCRiOS.framework */; };
 		DC79F79AEA680D8E7C461BC8 /* Pods_OCRiOS_OCRiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC66ED529F4E21BC158F659F /* Pods_OCRiOS_OCRiOSUITests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		96437C36265E24C80052ABEF /* OCRReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRReading.swift; sourceTree = "<group>"; };
 		96437C38265E25FB0052ABEF /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		96437C3A265E2D2D0052ABEF /* ControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTwo.swift; sourceTree = "<group>"; };
+		967E6D08266078E300B23211 /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		BC66ED529F4E21BC158F659F /* Pods_OCRiOS_OCRiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRiOS_OCRiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14B2D28DBA511F07E96C9D1 /* Pods_OCRiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				96437C03265E21870052ABEF /* SceneDelegate.swift */,
 				96437C05265E21870052ABEF /* ViewController.swift */,
 				96437C07265E21870052ABEF /* Main.storyboard */,
+				967E6D08266078E300B23211 /* example.jpg */,
 				96437C0D265E21870052ABEF /* Assets.xcassets */,
 				96437C0F265E21870052ABEF /* LaunchScreen.storyboard */,
 				96437C12265E21870052ABEF /* Info.plist */,
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96437C11265E21870052ABEF /* LaunchScreen.storyboard in Resources */,
+				967E6D09266078E300B23211 /* example.jpg in Resources */,
 				96437C35265E24000052ABEF /* tessdata in Resources */,
 				96437C0E265E21870052ABEF /* Assets.xcassets in Resources */,
 				96437C09265E21870052ABEF /* Main.storyboard in Resources */,
