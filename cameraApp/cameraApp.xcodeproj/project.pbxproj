@@ -10,6 +10,8 @@
 		167DAED35CE28A4883EB0840 /* Pods_cameraApp_cameraAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F45B197FB0381D26A7815B7 /* Pods_cameraApp_cameraAppUITests.framework */; };
 		469015C99EB88C64EF808637 /* Pods_cameraAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDCCC85B3BB2948104E6ED3 /* Pods_cameraAppTests.framework */; };
 		90E1D5EB47FE38A9D5E5B747 /* Pods_cameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60DD0C3684D1D84DF41EAFF /* Pods_cameraApp.framework */; };
+		964171082664769300CA3E45 /* Photoprocess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964171072664769300CA3E45 /* Photoprocess.swift */; };
+		9641710A2664870400CA3E45 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964171092664870400CA3E45 /* extension.swift */; };
 		969F8AD6265F20F8003A2A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8AD5265F20F8003A2A70 /* AppDelegate.swift */; };
 		969F8AD8265F20F8003A2A70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8AD7265F20F8003A2A70 /* SceneDelegate.swift */; };
 		969F8ADA265F20F8003A2A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8AD9265F20F8003A2A70 /* ViewController.swift */; };
@@ -23,6 +25,7 @@
 		969F8B18265F2BFB003A2A70 /* PhotoTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8B17265F2BFB003A2A70 /* PhotoTextController.swift */; };
 		969F8B1B265F2D23003A2A70 /* CamSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8B1A265F2D23003A2A70 /* CamSetting.swift */; };
 		969F8B21265F2DC4003A2A70 /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8B20265F2DC4003A2A70 /* CamViewController.swift */; };
+		96C78A7F26609C15000B1E33 /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C78A7E26609C15000B1E33 /* struct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,8 @@
 		63F977CFC05DDFC5D6B08B3E /* Pods-cameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.release.xcconfig"; path = "Target Support Files/Pods-cameraApp/Pods-cameraApp.release.xcconfig"; sourceTree = "<group>"; };
 		6F39F538E4D6EA47560494B0 /* Pods-cameraApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.debug.xcconfig"; path = "Target Support Files/Pods-cameraApp/Pods-cameraApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7F45B197FB0381D26A7815B7 /* Pods_cameraApp_cameraAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraApp_cameraAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		964171072664769300CA3E45 /* Photoprocess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photoprocess.swift; sourceTree = "<group>"; };
+		964171092664870400CA3E45 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		969F8AD2265F20F8003A2A70 /* cameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969F8AD5265F20F8003A2A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		969F8AD7265F20F8003A2A70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		969F8B17265F2BFB003A2A70 /* PhotoTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTextController.swift; sourceTree = "<group>"; };
 		969F8B1A265F2D23003A2A70 /* CamSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamSetting.swift; sourceTree = "<group>"; };
 		969F8B20265F2DC4003A2A70 /* CamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
+		96C78A7E26609C15000B1E33 /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
 		A3BEF5EB7B539623DBC79A6F /* Pods-cameraAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraAppTests.release.xcconfig"; path = "Target Support Files/Pods-cameraAppTests/Pods-cameraAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A60DD0C3684D1D84DF41EAFF /* Pods_cameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9DAFAE313356E07E938AA3 /* Pods-cameraApp-cameraAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp-cameraAppUITests.release.xcconfig"; path = "Target Support Files/Pods-cameraApp-cameraAppUITests/Pods-cameraApp-cameraAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 		969F8B0C265F227A003A2A70 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				964171092664870400CA3E45 /* extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +236,8 @@
 		969F8B0D265F2291003A2A70 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				96C78A7E26609C15000B1E33 /* struct.swift */,
+				964171072664769300CA3E45 /* Photoprocess.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -448,9 +457,12 @@
 				969F8B21265F2DC4003A2A70 /* CamViewController.swift in Sources */,
 				969F8AE0265F20F8003A2A70 /* cameraApp.xcdatamodeld in Sources */,
 				969F8ADA265F20F8003A2A70 /* ViewController.swift in Sources */,
+				9641710A2664870400CA3E45 /* extension.swift in Sources */,
+				96C78A7F26609C15000B1E33 /* struct.swift in Sources */,
 				969F8B1B265F2D23003A2A70 /* CamSetting.swift in Sources */,
 				969F8AD6265F20F8003A2A70 /* AppDelegate.swift in Sources */,
 				969F8B18265F2BFB003A2A70 /* PhotoTextController.swift in Sources */,
+				964171082664769300CA3E45 /* Photoprocess.swift in Sources */,
 				969F8AD8265F20F8003A2A70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

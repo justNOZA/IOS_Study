@@ -1,8 +1,25 @@
-//
-//  CamSetting.swift
-//  cameraApp
-//
-//  Created by Pasonatech on 2021/05/27.
-//
+import UIKit
+import AVFoundation
 
-import Foundation
+class PreviewView: UIView {
+    
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer {
+        guard let layer = layer as? AVCaptureVideoPreviewLayer else {
+            fatalError("Expected `AVCaptureVideoPreviewLayer` type for layer. Check PreviewView.layerClass implementation.")
+        }
+        return layer
+    }
+    
+    var session: AVCaptureSession? {
+        get {
+            return videoPreviewLayer.session
+        }
+        set {
+            videoPreviewLayer.session = newValue
+        }
+    }
+    
+    override class var layerClass: AnyClass {
+        return AVCaptureVideoPreviewLayer.self
+    }
+}
