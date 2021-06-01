@@ -126,6 +126,11 @@
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <gestureRecognizers/>
                             </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mE8-lI-mca">
+                                <rect key="frame" x="575.5" y="300" width="208.5" height="594"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-0q-43e">
                                 <rect key="frame" x="379.5" y="1059" width="75" height="75"/>
                                 <constraints>
@@ -152,7 +157,11 @@
                         <viewLayoutGuide key="safeArea" id="USk-a8-EjR"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mE8-lI-mca" secondAttribute="bottom" constant="300" id="5uN-n8-4p8"/>
+                            <constraint firstItem="mE8-lI-mca" firstAttribute="centerY" secondItem="mf1-gA-ZiI" secondAttribute="centerY" id="7mz-Xo-C5R"/>
+                            <constraint firstItem="USk-a8-EjR" firstAttribute="trailing" secondItem="mE8-lI-mca" secondAttribute="trailing" constant="50" id="Br5-lw-gXh"/>
                             <constraint firstItem="ad4-TJ-w3L" firstAttribute="centerX" secondItem="USk-a8-EjR" secondAttribute="centerX" id="C4U-zH-w9V"/>
+                            <constraint firstItem="mE8-lI-mca" firstAttribute="width" secondItem="mf1-gA-ZiI" secondAttribute="width" multiplier="0.25" id="DJ6-ED-HXB"/>
                             <constraint firstItem="ad4-TJ-w3L" firstAttribute="centerY" secondItem="mf1-gA-ZiI" secondAttribute="centerY" id="IM7-4c-Ljz"/>
                             <constraint firstItem="7j1-CB-F58" firstAttribute="centerY" secondItem="mf1-gA-ZiI" secondAttribute="centerY" id="YQZ-sg-1Lt"/>
                             <constraint firstItem="7j1-CB-F58" firstAttribute="leading" secondItem="USk-a8-EjR" secondAttribute="leading" id="Zef-Eg-KPt"/>
@@ -166,6 +175,7 @@
                     <connections>
                         <outlet property="cameraUnavailableLabel" destination="ad4-TJ-w3L" id="d7O-yq-gpc"/>
                         <outlet property="captureButton" destination="nvI-0q-43e" id="zBC-oh-WhJ"/>
+                        <outlet property="getValuePoint" destination="mE8-lI-mca" id="sLG-N7-2hM"/>
                         <outlet property="previewView" destination="7j1-CB-F58" id="IRS-37-xh3"/>
                     </connections>
                 </viewController>
