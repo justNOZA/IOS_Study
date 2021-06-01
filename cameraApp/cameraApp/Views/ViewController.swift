@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         }
     }
     @objc func ocrImage(){
-        print("touch")
         let modalViewController = storyboard?.instantiateViewController(identifier: "PhotoTextController") as! PhotoTextController
         if photoView.subviews.count != 0, let data = photoView.subviews[0] as? UIImageView{
             modalViewController.imageData = data.image
@@ -32,19 +31,6 @@ class ViewController: UIViewController {
         present(modalViewController, animated: true, completion: nil)
     }
     
-}
-extension ViewController : PhotoData{
-    func getData(image: UIImage?) {
-        deleteImage()
-        if let pd = image {
-            let wide = photoView.frame.width
-            let img = UIImageView()
-            img.contentMode = .scaleAspectFit
-            img.image = pd
-            photoView.addSubview(img)
-            plusContraint(img, CGFloat(0), wide)
-        }
-    }
     func deleteImage(){
         if photoView.subviews.count != 0 {
             photoView.subviews[0].removeFromSuperview()
@@ -59,9 +45,37 @@ extension ViewController : PhotoData{
             view.leadingAnchor.constraint(equalTo: view.superview!.leadingAnchor, constant: wide*num)
         ])
     }
+    func combineImage(_ firstImage:UIImage?, _ secondImage:UIImage?) -> UIImage?{
+        let size = CGSize(width: firstImage!.size.width+secondImage!.size.width, height: firstImage!.size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        
+        firstImage!.draw(in: CGRect(x: 0, y: 0, width: firstImage!.size.width, height: size.height))
+        secondImage!.draw(in: CGRect(x: firstImage!.size.width, y: 0, width: secondImage!.size.width, height: size.height))
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+}
+extension ViewController : PhotoData{
+    func getData(image: UIImage?, image2: UIImage?) {
+        let result = combineImage(image, image2)
+        deleteImage()
+        if let pd = result {
+            let wide = photoView.frame.width
+            let img = UIImageView()
+            img.contentMode = .scaleAspectFit
+            img.image = pd
+            photoView.addSubview(img)
+            plusContraint(img, CGFloat(0), wide)
+        }
+    }
+    
 }
 
 protocol PhotoData {
-    func getData(image: UIImage?)
+    func getData(image: UIImage?, image2:UIImage?)
 }
 

@@ -15,7 +15,7 @@ class PhotoCaptureProcessor: NSObject {
     
     lazy var context = CIContext()
     
-    private let completionHandler: (PhotoCaptureProcessor, UIImage?) -> Void
+    private let completionHandler: (PhotoCaptureProcessor, UIImage?, UIImage?) -> Void
     
     private let photoProcessingHandler: (Bool) -> Void
     
@@ -24,24 +24,25 @@ class PhotoCaptureProcessor: NSObject {
     private var maxPhotoProcessingTime: CMTime?
     
     private var img: UIImage?
+    private var img2: UIImage?
     
-    private var point: CGRect?
-    private var origin: CGRect?
+    private var point: UIView?
+//    private var origin: CGRect?
     
     init(with requestedPhotoSettings: AVCapturePhotoSettings,
          willCapturePhotoAnimation: @escaping () -> Void,
-         completionHandler: @escaping (PhotoCaptureProcessor, UIImage?) -> Void,
+         completionHandler: @escaping (PhotoCaptureProcessor, UIImage?, UIImage?) -> Void,
          photoProcessingHandler: @escaping (Bool) -> Void,
-         point: (CGRect, CGRect)) {
+         point: UIView) {
         self.requestedPhotoSettings = requestedPhotoSettings
         self.willCapturePhotoAnimation = willCapturePhotoAnimation
         self.completionHandler = completionHandler
         self.photoProcessingHandler = photoProcessingHandler
-        (self.point, self.origin) = point
+        self.point = point
     }
     private func didFinish() {
         //check
-        completionHandler(self, img)
+        completionHandler(self, img, img2)
     }
 }
 
@@ -80,7 +81,7 @@ extension PhotoCaptureProcessor: AVCapturePhotoCaptureDelegate {
         } else {
             photoData = photo.fileDataRepresentation()
             let image = UIImage(data: photoData!)
-            img = cropImage2(image: image!)
+            (img, img2) = cropImage2(image: image!)
         }
     }
     
@@ -96,13 +97,24 @@ extension PhotoCaptureProcessor: AVCapturePhotoCaptureDelegate {
         didFinish()
     }
     
-    func cropImage2(image: UIImage) -> UIImage? {
-        let rect = point!
-        let scale = origin!.width/image.size.width
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.size.width / scale, height: rect.size.height / scale), true, 0.0)
-        image.draw(at: CGPoint(x: -rect.origin.x / scale, y: -rect.origin.y / scale))
-        let croppedImage = UIGraphicsGetImageFromCurrentImageContext()
+    func cropImage2(image: UIImage) -> (UIImage?, UIImage?) {
+        let rect1 = point!.subviews[0].frame
+        let rect2 = point!.subviews[1].frame
+        let scale = point!.frame.width/image.size.width
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect1.size.width / scale, height: rect1.size.height / scale), true, 0.0)
+        image.draw(at: CGPoint(x: -rect1.origin.x / scale, y: -rect1.origin.y / scale))
+        let croppedImage1 = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return croppedImage
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect2.size.width / scale, height: rect2.size.height / scale), true, 0.0)
+        image.draw(at: CGPoint(x: -rect2.origin.x / scale, y: -rect2.origin.y / scale))
+        let croppedImage2 = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let ocr = OCRReading()
+        print(ocr.ocrRequest(image: croppedImage1!))
+        print(ocr.ocrRequest(image: croppedImage2!))
+// 여기서 바로 읽어내는 것도 가능
+        return (croppedImage1, croppedImage2)
     }
 }

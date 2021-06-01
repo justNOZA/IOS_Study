@@ -181,8 +181,7 @@ class CamViewController: UIViewController {
          the main thread and session configuration is done on the session queue.
          */
         let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection?.videoOrientation
-        let framePoint = self.previewView.subviews[0].frame
-        let originFrame = self.previewView.frame
+        let framePoint = self.previewView
         sessionQueue.async {
             if let photoOutputConnection = self.photoOutput.connection(with: .video) {
                 photoOutputConnection.videoOrientation = videoPreviewLayerOrientation!
@@ -208,13 +207,13 @@ class CamViewController: UIViewController {
                         self.previewView.videoPreviewLayer.opacity = 1
                     }
                 }
-            }, completionHandler: { (photoCaptureProcessor, img: UIImage?) in
+            }, completionHandler: { (photoCaptureProcessor, img: UIImage?, img2: UIImage?) in
                 // When the capture is complete, remove a reference to the photo capture delegate so it can be deallocated.
                 self.sessionQueue.async {
                     self.inProgressPhotoCaptureDelegates[photoCaptureProcessor.requestedPhotoSettings.uniqueID] = nil
                     self.session.stopRunning()
                 }
-                self.datasend?.getData(image: img)
+                self.datasend?.getData(image: img, image2: img2)
                 self.dismiss(animated: true, completion: nil)
             }, photoProcessingHandler: { animate in
                 // Animates a spinner while photo is processing
@@ -227,7 +226,7 @@ class CamViewController: UIViewController {
                         self.spinner.stopAnimating()
                     }
                 }
-            }, point: (framePoint, originFrame)
+            }, point: framePoint!
             )
             
             // The photo output holds a weak reference to the photo capture delegate and stores it in an array to maintain a strong reference.
