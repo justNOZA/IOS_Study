@@ -16,11 +16,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        photoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ocrImage)))
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let svc = segue.destination as? CamViewController{
             svc.datasend = self
         }
+    }
+    @objc func ocrImage(){
+        print("touch")
+        let modalViewController = storyboard?.instantiateViewController(identifier: "PhotoTextController") as! PhotoTextController
+        if photoView.subviews.count != 0, let data = photoView.subviews[0] as? UIImageView{
+            modalViewController.imageData = data.image
+        }
+        present(modalViewController, animated: true, completion: nil)
     }
     
 }

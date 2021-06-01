@@ -26,6 +26,8 @@
 		969F8B1B265F2D23003A2A70 /* CamSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8B1A265F2D23003A2A70 /* CamSetting.swift */; };
 		969F8B21265F2DC4003A2A70 /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8B20265F2DC4003A2A70 /* CamViewController.swift */; };
 		96C78A7F26609C15000B1E33 /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C78A7E26609C15000B1E33 /* struct.swift */; };
+		96F3752F2665C10C000B9C4F /* preview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3752E2665C10C000B9C4F /* preview.xib */; };
+		96F375332665FF6B000B9C4F /* OCRReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F375322665FF6B000B9C4F /* OCRReading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		969F8B1A265F2D23003A2A70 /* CamSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamSetting.swift; sourceTree = "<group>"; };
 		969F8B20265F2DC4003A2A70 /* CamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
 		96C78A7E26609C15000B1E33 /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
+		96F3752E2665C10C000B9C4F /* preview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = preview.xib; sourceTree = "<group>"; };
+		96F375322665FF6B000B9C4F /* OCRReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRReading.swift; sourceTree = "<group>"; };
 		A3BEF5EB7B539623DBC79A6F /* Pods-cameraAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraAppTests.release.xcconfig"; path = "Target Support Files/Pods-cameraAppTests/Pods-cameraAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A60DD0C3684D1D84DF41EAFF /* Pods_cameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9DAFAE313356E07E938AA3 /* Pods-cameraApp-cameraAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp-cameraAppUITests.release.xcconfig"; path = "Target Support Files/Pods-cameraApp-cameraAppUITests/Pods-cameraApp-cameraAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 			children = (
 				96C78A7E26609C15000B1E33 /* struct.swift */,
 				964171072664769300CA3E45 /* Photoprocess.swift */,
+				96F375322665FF6B000B9C4F /* OCRReading.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				969F8B1A265F2D23003A2A70 /* CamSetting.swift */,
+				96F3752E2665C10C000B9C4F /* preview.xib */,
 			);
 			path = Customize;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 			files = (
 				969F8AE5265F20F9003A2A70 /* LaunchScreen.storyboard in Resources */,
 				969F8AE2265F20F9003A2A70 /* Assets.xcassets in Resources */,
+				96F3752F2665C10C000B9C4F /* preview.xib in Resources */,
 				969F8ADD265F20F8003A2A70 /* Main.storyboard in Resources */,
 				969F8B12265F2345003A2A70 /* Localizble.strings in Resources */,
 			);
@@ -462,6 +469,7 @@
 				969F8B1B265F2D23003A2A70 /* CamSetting.swift in Sources */,
 				969F8AD6265F20F8003A2A70 /* AppDelegate.swift in Sources */,
 				969F8B18265F2BFB003A2A70 /* PhotoTextController.swift in Sources */,
+				96F375332665FF6B000B9C4F /* OCRReading.swift in Sources */,
 				964171082664769300CA3E45 /* Photoprocess.swift in Sources */,
 				969F8AD8265F20F8003A2A70 /* SceneDelegate.swift in Sources */,
 			);

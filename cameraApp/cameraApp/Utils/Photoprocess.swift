@@ -25,14 +25,19 @@ class PhotoCaptureProcessor: NSObject {
     
     private var img: UIImage?
     
+    private var point: CGRect?
+    private var origin: CGRect?
+    
     init(with requestedPhotoSettings: AVCapturePhotoSettings,
          willCapturePhotoAnimation: @escaping () -> Void,
          completionHandler: @escaping (PhotoCaptureProcessor, UIImage?) -> Void,
-         photoProcessingHandler: @escaping (Bool) -> Void) {
+         photoProcessingHandler: @escaping (Bool) -> Void,
+         point: (CGRect, CGRect)) {
         self.requestedPhotoSettings = requestedPhotoSettings
         self.willCapturePhotoAnimation = willCapturePhotoAnimation
         self.completionHandler = completionHandler
         self.photoProcessingHandler = photoProcessingHandler
+        (self.point, self.origin) = point
     }
     private func didFinish() {
         //check
@@ -74,7 +79,8 @@ extension PhotoCaptureProcessor: AVCapturePhotoCaptureDelegate {
             print("Error capturing photo: \(error)")
         } else {
             photoData = photo.fileDataRepresentation()
-            img = UIImage(data: photoData!)
+            let image = UIImage(data: photoData!)
+            img = cropImage2(image: image!)
         }
     }
     
@@ -88,5 +94,15 @@ extension PhotoCaptureProcessor: AVCapturePhotoCaptureDelegate {
         }
         
         didFinish()
+    }
+    
+    func cropImage2(image: UIImage) -> UIImage? {
+        let rect = point!
+        let scale = origin!.width/image.size.width
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.size.width / scale, height: rect.size.height / scale), true, 0.0)
+        image.draw(at: CGPoint(x: -rect.origin.x / scale, y: -rect.origin.y / scale))
+        let croppedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return croppedImage
     }
 }

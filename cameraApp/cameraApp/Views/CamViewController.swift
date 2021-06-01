@@ -22,8 +22,6 @@ class CamViewController: UIViewController {
         // unknown: The orientation of the device is unknown.
         return view.window?.windowScene?.interfaceOrientation ?? .unknown
     }
-    
-    @IBOutlet weak var getValuePoint: UIView!
     //An object that manages capture activity and coordinates the flow of data from input devices to capture outputs.
     private let session = AVCaptureSession()
     private var isSessionRunning = false
@@ -183,7 +181,8 @@ class CamViewController: UIViewController {
          the main thread and session configuration is done on the session queue.
          */
         let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection?.videoOrientation
-        
+        let framePoint = self.previewView.subviews[0].frame
+        let originFrame = self.previewView.frame
         sessionQueue.async {
             if let photoOutputConnection = self.photoOutput.connection(with: .video) {
                 photoOutputConnection.videoOrientation = videoPreviewLayerOrientation!
@@ -201,7 +200,6 @@ class CamViewController: UIViewController {
             }
             
             photoSettings.photoQualityPrioritization = self.photoQualityPrioritizationMode
-            
             let photoCaptureProcessor = PhotoCaptureProcessor(with: photoSettings, willCapturePhotoAnimation: {
                 // Flash the screen to signal that AVCam took a photo.
                 DispatchQueue.main.async {
@@ -216,7 +214,7 @@ class CamViewController: UIViewController {
                     self.inProgressPhotoCaptureDelegates[photoCaptureProcessor.requestedPhotoSettings.uniqueID] = nil
                     self.session.stopRunning()
                 }
-                self.datasend?.getData(image: /*self.photoshop(img: img!, point: self.getValuePoint.frame)*/img)
+                self.datasend?.getData(image: img)
                 self.dismiss(animated: true, completion: nil)
             }, photoProcessingHandler: { animate in
                 // Animates a spinner while photo is processing
@@ -229,7 +227,7 @@ class CamViewController: UIViewController {
                         self.spinner.stopAnimating()
                     }
                 }
-            }
+            }, point: (framePoint, originFrame)
             )
             
             // The photo output holds a weak reference to the photo capture delegate and stores it in an array to maintain a strong reference.
@@ -238,14 +236,6 @@ class CamViewController: UIViewController {
         }
         
     }
-    //여깃 수정하면 될듯
-    private func photoshop(img:UIImage, point: CGRect) -> UIImage {
-        print(point)
-        let imageRef = img.cgImage?.cropping(to: point)
-        let image = UIImage(cgImage: imageRef!)
-        return image
-    }
-    
 }
 
 extension CamViewController : AVCapturePhotoCaptureDelegate{
