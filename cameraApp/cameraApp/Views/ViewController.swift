@@ -35,6 +35,7 @@ class ViewController: UIViewController {
 }
 extension ViewController : PhotoData{
     func getData(image: UIImage?) {
+        deleteImage()
         if let pd = image {
             let wide = photoView.frame.width
             let img = UIImageView()
@@ -44,7 +45,11 @@ extension ViewController : PhotoData{
             plusContraint(img, CGFloat(0), wide)
         }
     }
-    
+    func deleteImage(){
+        if photoView.subviews.count != 0 {
+            photoView.subviews[0].removeFromSuperview()
+        }
+    }
     func plusContraint(_ view: UIImageView, _ num : CGFloat, _ wide : CGFloat){
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
